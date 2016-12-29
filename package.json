@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "bervan-design",
+  "name": "bervandesign",
   "homepage": "http://bervandesign.be",
   "twitter": "",
   "repository": "https://github.com/easybird/bervandesign.be.git",
@@ -11,7 +11,9 @@
     "start": "phenomic start",
     "build": "phenomic build",
     "pretest": "npm run lint",
-    "test": "npm run build"
+    "test": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "./scripts/deploy.sh"
   },
   "phenomic": {
     "CNAME": true

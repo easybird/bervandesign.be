@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - 'node'
+  - node
   - '6'
 branches:
   except:
-  - master
+    - master
 deploy:
   skip_cleanup: true
   provider: script
@@ -15,5 +15,6 @@ deploy:
 env:
   global:
     - secure: >-
-        geZsX/hrqR+4CBZbyTg40eOeqU8KPz+cWEDosR2hWjj27s7Qk9+2SvCqpqvdAOYrzgc0D6Qnjgm1cm48Rh5jeuv+udM2J7OFWLWOo+4ZtG63LyCmucvcV/fLkxtbcuvtGV3OZYp38ofNYBn2tQ0clIavN9R0m2Uobi3isiYhuDtBcIeeZivPLaCQ1jh6vm9BMq1vFJQsOhYTdiY/wsyuwWIS2ryv+wDZCY+2Nw69SX/OdWqn0M/A7p4v676nVBoavW+3+6N0eeyFvOcByWYGWP+seejTGNUaA+qLhOf49PWM2hPvGdfbfImzzrNfAHjy/PyEeU3iXq+AiGaEGqot9NjnW2JAFHj8VcXHKbjNRniPE6TVpDr+tmBxexLcATRPE44Um+ZbpXDR4t0paBJG2s91gMrVb2RuFtYbyPI0/wLvyLAolxPo5Eo5RKsE6agnWQEYYVfaxGkLP4+e8UcR2uYw8tH5igvjf0NDfcmvhZgWcwjnj9TP/MFDZCQ9t6kuR7kIQEV+N8wuGNsMtsha6qjd3d9KtCAgxDmWV19XulBR7bDYAzvkVcjzPC5nPibIBUcLRGUdvY6wDGt13ssQKyimmBlc5r04RvSQ3zHzavNj1+tN+oEKQpV96c2vr8+h1ayC9ipR7+ufU0PF5mKe1ShOL0sEEVXwf3X7JMPKY8I=
+            JjiBt47rI2Sy2cCNuDnT+9Hz/iJzn9DoL5WsDM/aBKj2C4vODV2wrCd3WNld6qtWjnv8iFGtwXEbwen8KDwNITct402fERCxyO6ZldapG1s840DH5fg6PSArJhfw4c2DuS7552JDh7dl+O1k6PifUujFZyWBesi7MtMuJAQ33fpx+aKnlRqDSShaNVxL265fFZFzTivooUmPRv9q7n2NrO9ZypmcIDv9rtdZsFdFMfxZWwkRjLsq6jt7L4FSi/+dnKTXwpqiRKFnVfQLabIe3hUCegGS01cWks+VUeyjVwaKKxsG9c7a4sY7JpQz2niOfZvNtYEqoFm/9I4IodBvg3Z7SpQIvOpiOU0A4IMyJq4oa3wkpe1cW5oHaikW2KEYDQ91Aa+/rR67gqL/lxFArfIGyaJhA8rU7AeNl9u2/2TPwYdrLX1uU7hZKQ4UEn4JAzLlE6TbQN4g1ITpYgYyn4vJH/PkxfipXT3BDTFj7zCYFV1DZ/xToggUG7F4MAYI5+T8CpuP5+AF7FPLdsORouAtawaqlKKy87tOF+kJyOEh6LBMzucakWN97suFiRcdjq8P7mOtaWVzJR5j+v/J3Qr7XvTI2xku8G6FAGOzXqQb8lOuV5idHoo+OyUVxxTYSrY0pIyMTcugeFRC46Plk6lSnUT5fwXIfpBOdgCxTEY=
     - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/easybird/bervandesign.be.git
+
