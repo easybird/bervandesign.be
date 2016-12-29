@@ -1,3 +1,6 @@
+# Editor
+.idea
+
 # node / npm
 node_modules
 *.log
