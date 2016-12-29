@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 'node'
+  - '6'
+branches:
+  except:
+  - master
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./scripts/deploy.sh
+  'on':
+    branch: develop
+    node: '6'
+env:
+  global:
+    - secure: >-
+        geZsX/hrqR+4CBZbyTg40eOeqU8KPz+cWEDosR2hWjj27s7Qk9+2SvCqpqvdAOYrzgc0D6Qnjgm1cm48Rh5jeuv+udM2J7OFWLWOo+4ZtG63LyCmucvcV/fLkxtbcuvtGV3OZYp38ofNYBn2tQ0clIavN9R0m2Uobi3isiYhuDtBcIeeZivPLaCQ1jh6vm9BMq1vFJQsOhYTdiY/wsyuwWIS2ryv+wDZCY+2Nw69SX/OdWqn0M/A7p4v676nVBoavW+3+6N0eeyFvOcByWYGWP+seejTGNUaA+qLhOf49PWM2hPvGdfbfImzzrNfAHjy/PyEeU3iXq+AiGaEGqot9NjnW2JAFHj8VcXHKbjNRniPE6TVpDr+tmBxexLcATRPE44Um+ZbpXDR4t0paBJG2s91gMrVb2RuFtYbyPI0/wLvyLAolxPo5Eo5RKsE6agnWQEYYVfaxGkLP4+e8UcR2uYw8tH5igvjf0NDfcmvhZgWcwjnj9TP/MFDZCQ9t6kuR7kIQEV+N8wuGNsMtsha6qjd3d9KtCAgxDmWV19XulBR7bDYAzvkVcjzPC5nPibIBUcLRGUdvY6wDGt13ssQKyimmBlc5r04RvSQ3zHzavNj1+tN+oEKQpV96c2vr8+h1ayC9ipR7+ufU0PF5mKe1ShOL0sEEVXwf3X7JMPKY8I=
+    - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/easybird/bervandesign.be.git
