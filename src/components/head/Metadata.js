@@ -1,0 +1,66 @@
+import React, { PropTypes } from 'react';
+import Helmet from 'react-helmet';
+import warning from "warning"
+import { joinUri } from 'phenomic';
+
+const Metadata = ({
+  __filename,
+  __url,
+  head
+},
+  {
+    metadata: { pkg }
+  }) => {
+  warning(
+    typeof head.title === "string",
+    `Your page '${ __filename }' needs a title`
+  )
+
+  const metaTitle = head.metaTitle ? head.metaTitle : head.title;
+
+  const meta = [
+    { property: "og:type", content: "article" },
+    { property: "og:title", content: metaTitle },
+    {
+      property: "og:url",
+      content: joinUri(process.env.PHENOMIC_USER_URL, __url),
+    },
+    { property: "og:description", content: head.description },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:title", content: metaTitle },
+    { name: "twitter:creator", content: `@${ pkg.twitter }` },
+    { name: "twitter:description", content: head.description },
+    { name: "description", content: head.description },
+    // for favicons
+    { name: "theme-color", content: "#ffffff"}
+  ];
+
+  const favicons = [
+    // created by realfavicongenerator.net
+    { "rel": "apple-touch-icon", "sizes": "120x120", "href": "/assets/img/favicon/apple-touch-icon.png" },
+    { "rel": "icon", "type": "image/png", "href": "/assets/img/favicon/favicon-32x32.png", "sizes": "32x32" },
+    { "rel": "icon", "type": "image/png", "href": "/assets/img/favicon/favicon-16x16.png", "sizes": "16x16" },
+    { "rel": "manifest", "href": "/assets/img/favicon/manifest.json" },
+    { "rel": "mask-icon", "href": "/assets/img/favicon/safari-pinned-tab.svg", "color": "#5bbad5" }
+  ];
+
+  return (
+      <Helmet
+        link={ favicons }
+        title={ metaTitle }
+        meta={ meta }
+      />
+  )
+};
+
+Metadata.propTypes = {
+  __filename: PropTypes.string,
+  __url: PropTypes.string,
+  head: PropTypes.object.isRequired,
+};
+
+Metadata.contextTypes = {
+  metadata: PropTypes.object.isRequired,
+};
+
+export default Metadata

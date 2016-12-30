@@ -64,7 +64,9 @@ const Page = (
               {
                 head.cta &&
                 <Link to={ head.cta.link }>
-                  <Button className={ styles.cta } light { ...head.cta.props }>
+                  <Button className={ styles.cta }
+                          light
+                          { ...head.cta.props }>
                     { head.cta.label }
                   </Button>
                 </Link>

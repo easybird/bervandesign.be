@@ -1,0 +1,78 @@
+@custom-media --tablet-portrait (480px < width <= 786px);
+@custom-media --tablet-landscape (786px < width <= 1024px);
+@custom-media --tablet-and-up (width > 480px);
+@custom-media --tablet-landscape-and-up (width > 786px);
+@custom-media --desktop-and-up (width > 1024px);
+
+:root {
+  --nav-item-padding: 0.5rem;
+}
+
+.mainNav {
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.visible {
+  display: flex;
+}
+
+.mainNav li {
+  display: inline-block;
+  flex: 1;
+  list-style: none;
+}
+
+.link:link,
+.link:visited {
+  padding: 5px;
+  display: flex;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.35s;
+  font-size: 90%;
+  justify-content: center;
+}
+
+.link:hover,
+.link:active {
+  padding: 5px 5px 6px;
+  margin: 0;
+}
+
+.link svg {
+  fill: currentColor;
+  opacity: 0.5;
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+.mainNav li {
+  display: inline-block;
+  width: 100%;
+  flex: 1;
+  padding: 0 calc(var(--nav-item-padding) * 2);
+}
+
+.mainNav li:hover,
+.mainNav li:active {
+  border-bottom: 3px solid var(--colorPrimary);
+  border-bottom-width: thin;
+}
+
+@media (--tablet-landscape-and-up) {
+  .mainNav {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
