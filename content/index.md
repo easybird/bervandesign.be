@@ -1,8 +1,14 @@
 ---
-title: Phenomic base theme
-layout: Homepage
-hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
-# hero credit: https://www.flickr.com/photos/pslee999/15589950511/
+title: Bervan Design
+layout: BervanHomepage
+hero:
+  images:
+    /assets/img/hero/hero_kantoor.jpg,
+    /assets/img/hero/hero_landelijk.jpg,
+    /assets/img/hero/hero_modern.jpg,
+    /assets/img/hero/hero_sfeer.jpg,
+    /assets/img/hero/hero_slaapkamer.jpg 
+  title: Creatief maatwerk
 cta:
   label: About this theme
   link: "about"

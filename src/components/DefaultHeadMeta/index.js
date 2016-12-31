@@ -13,6 +13,11 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
         { name: "twitter:site", content: `@${ pkg.twitter }` },
         ...props.meta ? props.meta : [],
       ] }
+      link={ [
+        { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" },
+        { rel: "stylesheet", href: "/assets/css/material-icons.css"}
+      ] }
       script={ [
         { src: "https://cdn.polyfill.io/v2/polyfill.min.js" },
         ...props.scripts ? props.scripts : [],

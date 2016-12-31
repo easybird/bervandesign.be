@@ -1,0 +1,74 @@
+@custom-media --tablet-portrait (480px < width <= 786px);
+@custom-media --tablet-landscape (786px < width <= 1024px);
+@custom-media --tablet-and-up (width > 480px);
+@custom-media --tablet-landscape-and-up (width > 786px);
+@custom-media --desktop-and-up (width > 1024px);
+
+.mobileNavBar {
+  cursor: pointer;
+  margin-right: 10%;
+}
+
+.mobileNavBar .icon {
+  color: var(--colorSecondary);
+}
+
+.mobileNavBar .icon:active,
+.mobileNavBar .icon:hover {
+  color: var(--colorPrimary);
+}
+
+.navBarWrapper {
+  background-color: var(--colorWhite);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobileWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siteWrapper {
+  display: none;
+}
+
+.navBarFakeTop {
+  width: 100%;
+  display: block;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.leftPlaceholder {
+  margin-right: auto;
+  visibility: hidden;
+}
+
+.center {
+}
+
+.right {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+@media (--tablet-landscape-and-up) {
+  .mobileWrapper {
+    display: none;
+  }
+
+  .siteWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
