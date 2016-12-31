@@ -16,15 +16,15 @@ class BervanHomepage extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('wheel', this.handleWheel, false);
-    Events.scrollEvent.register('begin', function (to, element) {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register('end', function (to, element) {
-      console.log("end", arguments);
-    });
-
+    // window.addEventListener('wheel', this.handleWheel, false);
+    // Events.scrollEvent.register('begin', function (to, element) {
+    //   console.log("begin", arguments);
+    // });
+    //
+    // Events.scrollEvent.register('end', function (to, element) {
+    //   console.log("end", arguments);
+    // });
+    //
     scrollSpy.update();
   }
 
@@ -32,7 +32,6 @@ class BervanHomepage extends React.Component {
     // https://codepen.io/somethingkindawierd/post/react-mixin-scroll-lock
     this._cancelScrollEvent(event);
     if (this.state.isScrolling) return false;
-    console.log('wheel!!!');
     this.setState({
       isScrolling: true
     });
