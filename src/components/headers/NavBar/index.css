@@ -38,7 +38,6 @@
 }
 
 .navBarFakeTop {
-  min-height: calc(56px + 2vh);
   width: 100%;
   display: block;
 }

@@ -1,0 +1,57 @@
+@custom-media --tablet-portrait (480px < width <= 786px);
+@custom-media --tablet-landscape (786px < width <= 1024px);
+@custom-media --tablet-and-up (width > 480px);
+@custom-media --tablet-landscape-and-up (width > 786px);
+@custom-media --desktop-and-up (width > 1024px);
+
+.flexslider {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: var(--colorText);
+  position: relative;
+  zoom: 1;
+  padding: 0;
+}
+
+.heroTextBox {
+  z-index: 10;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+}
+
+.heroTextBox h1 {
+  color: var(--colorWhite);
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  height: 70vh;
+  background: no-repeat center;
+  background-size: cover;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.invisible {
+  opacity: 0.01;
+  transition: opacity 1500ms ease-in;
+}
+
+.flexslider .slides::after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}

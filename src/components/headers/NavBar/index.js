@@ -15,15 +15,25 @@ class NavBar extends React.Component {
 
   render() {
     const { isVisible } = this.state;
+    const { height } = this.props;
+
+    const logo =
+      <Logo
+        height={height}
+        margin='1vh auto'
+      />;
 
     return (
       <nav>
-        <div className={styles.navBarFakeTop}></div>
+        <div
+          className={styles.navBarFakeTop}
+          style={{ minHeight: `calc(${height} + 2vh)` }}
+        />
         <div className={styles.navBarWrapper}>
           <div className={styles.mobileWrapper}>
             <div className={`${styles.box} ${styles.leftPlaceholder}`}/>
             <div className={`${styles.box} ${styles.center}`}>
-              <Logo/>
+              {logo}
             </div>
             <div className={`${styles.box} ${styles.right}`}>
               <a
@@ -44,7 +54,7 @@ class NavBar extends React.Component {
           </div>
           <div className={styles.siteWrapper}>
             <div className={styles.box}>
-              <Logo />
+              {logo}
             </div>
             <div className={styles.box}>
               <NavBarLinks
@@ -56,6 +66,10 @@ class NavBar extends React.Component {
       </nav>
     );
   }
+}
+
+NavBar.propTypes = {
+  height: React.PropTypes.string.isRequired
 }
 
 export default NavBar;

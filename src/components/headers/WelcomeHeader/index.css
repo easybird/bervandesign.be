@@ -1,0 +1,55 @@
+.welcomeHeader {
+  height: 100vh;
+}
+
+.banner {
+  height: 40vh;
+}
+
+.logo {
+  height: 30vh;
+  display: flex;
+}
+
+.heroTextBox {
+  z-index: 10;
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px auto;
+  text-decoration: none;
+  font-weight: 300;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: var(--colorSecondary);
+  border: 1px solid var(--colorSecondary);
+  color: var(--colorText);
+}
+
+.btnFull:link,
+.btnFull:visited {
+  margin-right: 15px;
+}
+
+.btnGhost:link,
+.btnGhost:visited {
+  background-color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--colorPrimary);
+  border: 1px solid var(--colorPrimary);
+}
+
+.btnGhost:hover,
+.btnGhost:active {
+  background-color: var(--colorSecondary);
+  border: 1px solid var(--colorSecondary);
+}
