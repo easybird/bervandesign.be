@@ -9,7 +9,6 @@ export default class HeroImages extends Component {
     const min = 0;
 
     var slide = this.props.random ? Math.floor(Math.random() * (max - min)) + min : 0;
-    console.log(`slide:${slide}`)
     this.state = {
       slide,
       dragging: null,
@@ -49,7 +48,7 @@ export default class HeroImages extends Component {
 
   render() {
     const { slide } = this.state;
-    const { title } = this.props;
+    const { title, height } = this.props;
 
     const li = this.props.links.map(
       (link, index) =>
@@ -62,9 +61,11 @@ export default class HeroImages extends Component {
             marginRight: '-100%',
             position: 'relative',
             display: 'block',
+            height: `${height}`,
             zIndex: `${ slide == index ? 2 : 1}`
           }}
-          className={`${styles.slide} ${slide == index ? styles.visible : styles.invisible}`}>
+          className={`${styles.slide} ${slide == index ? styles.visible : styles.invisible}`}
+        >
         </li>
     );
 
@@ -85,5 +86,6 @@ HeroImages.propTypes = {
   title: React.PropTypes.string,
   random: React.PropTypes.bool,
   links: React.PropTypes.array.isRequired,
+  height: React.PropTypes.string.isRequired,
   autoplayInteval: React.PropTypes.number.isRequired
 };

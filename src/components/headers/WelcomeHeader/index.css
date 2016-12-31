@@ -1,14 +1,8 @@
 .welcomeHeader {
   height: 100vh;
-}
-
-.banner {
-  height: 40vh;
-}
-
-.logo {
-  height: 30vh;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .heroTextBox {

@@ -8,7 +8,7 @@ hero:
     /assets/img/hero/hero_modern.jpg,
     /assets/img/hero/hero_sfeer.jpg,
     /assets/img/hero/hero_slaapkamer.jpg 
-  title: Creatief in huis
+  title: Creatief maatwerk
 cta:
   label: About this theme
   link: "about"
