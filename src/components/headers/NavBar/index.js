@@ -32,7 +32,7 @@ class NavBar extends React.Component {
                 className={styles.mobileNavBar}>
 
                 <i className={`${styles.icon} material-icons md-36`}>
-                  {isVisible ? 'clear_all' : 'view_headline'}
+                  {isVisible ? 'clear' : 'view_headline'}
                 </i>
               </a>
             </div>

@@ -12,13 +12,11 @@
   display: none;
   flex-direction: column;
   margin: 0 auto;
-  flex-wrap: wrap;
   align-items: center;
-  width: 100%;
 }
 
 .visible {
-  display: flex;
+  display: inline-flex;
 }
 
 .mainNav li {
@@ -70,7 +68,7 @@
 @media (--tablet-landscape-and-up) {
   .mainNav {
     margin: 0 auto;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
