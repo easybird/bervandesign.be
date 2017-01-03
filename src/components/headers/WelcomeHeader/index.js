@@ -3,7 +3,7 @@ import HeroImages from '../HeroImages';
 import styles from './index.css';
 import { Link } from 'react-scroll';
 
-const WelcomeHeader = ({ scrollTo, head, pageHeightLoss }) => (
+const WelcomeHeader = ({ scrollTo, isActive, head, pageHeightLoss }) => (
   <header
     className={styles.welcomeHeader}
     style={{ height: `calc(100vh - ${pageHeightLoss})` }}
@@ -23,6 +23,7 @@ const WelcomeHeader = ({ scrollTo, head, pageHeightLoss }) => (
       smooth={true}
       offset={-70}
       duration={1000}
+      onSetActive={isActive}
       className={styles.logo}
       style={{
         cursor: "pointer",
@@ -41,6 +42,7 @@ const WelcomeHeader = ({ scrollTo, head, pageHeightLoss }) => (
 
 WelcomeHeader.propTypes = {
   scrollTo: React.PropTypes.string,
+  isActive: React.PropTypes.func,
   head: PropTypes.object.isRequired,
   pageHeightLoss: React.PropTypes.string.isRequired
 };
