@@ -10,12 +10,7 @@
 }
 
 .mobileNavBar .icon {
-  color: var(--colorSecondary);
-}
-
-.mobileNavBar .icon:active,
-.mobileNavBar .icon:hover {
-  color: var(--colorPrimary);
+  color: var(--colorBlack);
 }
 
 .navBarWrapper {

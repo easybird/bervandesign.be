@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import HeroImages from '../HeroImages';
 import styles from './index.css';
-import { Link } from 'react-scroll';
+import Pointer from '../Pointer';
 
 const WelcomeHeader = ({ scrollTo, isActive, head, pageHeightLoss }) => (
   <header
@@ -17,26 +17,10 @@ const WelcomeHeader = ({ scrollTo, isActive, head, pageHeightLoss }) => (
       />
     </div>
     <div></div>
-    <Link
-      to={scrollTo}
-      spy={true}
-      smooth={true}
-      offset={-70}
-      duration={1000}
-      onSetActive={isActive}
-      className={styles.logo}
-      style={{
-        cursor: "pointer",
-        flexGrow: 1,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      <i className={`${styles.icon} material-icons md-36`}>
-        keyboard_arrow_down
-      </i>
-    </Link>
+    <Pointer
+      scrollTo={scrollTo}
+      isActive={isActive}
+    />
   </header>
 );
 

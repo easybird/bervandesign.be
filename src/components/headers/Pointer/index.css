@@ -1,0 +1,14 @@
+.pointerIcon {
+  font-size: 300%;
+  transition: all 1s;
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.pointer:hover .pointerIcon {
+  font-size: 400%;
+  opacity: 1;
+}
