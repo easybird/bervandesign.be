@@ -29,7 +29,9 @@ class BervanHomepage extends React.Component {
     // https://github.com/brigade/react-waypoint ==> to lazy load stuff
     window.addEventListener('keydown', this.handleKeyDown, true);
     window.addEventListener('wheel', this.handleWheel, true);
-    window.addEventListener('touchstart', (event) => {ts = event.touches[0].clientY}, true);
+    window.addEventListener('touchstart', (event) => {
+      ts = event.touches[0].clientY
+    }, true);
     window.addEventListener('touchmove', (event) => this.handleTouch(event, ts), true);
     Events.scrollEvent.register('begin', () => {
       this.setState({
@@ -60,6 +62,7 @@ class BervanHomepage extends React.Component {
     }
     return this.scrollUp(event);
   }
+
   _handleWheel(event) {
     if (event.deltaY > 0) {
       return this.scrollDown(event);
@@ -134,6 +137,7 @@ class BervanHomepage extends React.Component {
     }
 
     return (
+      // TODO parallax way of scrolling: react-track -> react-spark-scroll
       <div
         className={ styles.bervanHomepage }
       >
@@ -146,7 +150,7 @@ class BervanHomepage extends React.Component {
           <WelcomeHeader
             pageHeightLoss="56px"
             scrollTo={documentFlow[1]}
-            isActive={() => this.setState({activeDocument: 1})}
+            isActive={() => this.setState({ activeDocument: 1 })}
             { ...this.props }
           />
         </Element>
