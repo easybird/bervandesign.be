@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.css';
 import { Link } from 'react-router';
 
-const ImageBlock = ({ url, title, link, color, position }) => (
+const ImageBlock = ({ url, title, link, position }) => (
   <figure
     className={styles.image}
     style={{ backgroundImage: `url(${url})` }}

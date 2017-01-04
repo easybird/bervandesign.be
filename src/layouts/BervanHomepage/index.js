@@ -96,6 +96,8 @@ class BervanHomepage extends React.Component {
   }
 }
 
-BervanHomepage.propTypes = {};
+BervanHomepage.propTypes = {
+  head: React.PropTypes.object.isRequired
+};
 
 export default BervanHomepage;
