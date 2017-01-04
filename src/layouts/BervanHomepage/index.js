@@ -2,55 +2,45 @@ import React from 'react';
 import Metadata from '../../components/head/Metadata';
 import NavBar from '../../components/headers/NavBar';
 import WelcomeHeader from '../../components/headers/WelcomeHeader';
-import { Element, Events, scrollSpy, scroller } from 'react-scroll';
+import { Element, Events } from 'react-scroll';
 import styles from './index.css';
+import BervanContentPage from '../BervanContentPage';
+
+const documentFlow = ['header', 'content1', 'content2'];
+const navBarHeight = '56px';
 
 class BervanHomepage extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleWheel = (event) => this._handleWheel(event);
+    this.scrollTo = (divName) => this._scrollTo(divName);
+    this.scrollUp = (event) => this._scrollUp(event);
+    this.scrollDown = (event) => this._scrollDown(event);
+    this.cancelEvent = (event) => this._cancelEvent(event);
     this.state = {
-      isScrolling: false
+      isScrolling: false,
+      activeDocument: 0
     }
   }
 
   componentDidMount() {
-    // window.addEventListener('wheel', this.handleWheel, false);
-    // Events.scrollEvent.register('begin', function (to, element) {
-    //   console.log("begin", arguments);
-    // });
-    //
-    // Events.scrollEvent.register('end', function (to, element) {
-    //   console.log("end", arguments);
-    // });
-    //
-    scrollSpy.update();
-  }
-
-  _handleWheel(event) {
-    // https://codepen.io/somethingkindawierd/post/react-mixin-scroll-lock
-    this._cancelScrollEvent(event);
-    if (this.state.isScrolling) return false;
-    this.setState({
-      isScrolling: true
+    // https://github.com/brigade/react-waypoint ==> to lazy load stuff
+    Events.scrollEvent.register('begin', () => {
+      this.setState({
+        isScrolling: true
+      });
     });
-    scroller.scrollTo('test', {
-      duration: 1500,
-      delay: 100,
-      smooth: true
-    });
-  }
 
-  _cancelScrollEvent(event) {
-    event.stopImmediatePropagation();
-    event.preventDefault();
-    event.returnValue = false;
-    return false;
+    Events.scrollEvent.register('end', () => {
+      this.setState({
+        activeDocument: typeof this.state.nextDocument !== 'undefined' ? this.state.nextDocument : this.state.activeDocument,
+        nextDocument: undefined,
+        isScrolling: false
+      });
+    });
   }
 
   componentWillUnmount() {
-    window.removeEventListener('wheel', this.handleWheel);
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
   }
@@ -72,16 +62,34 @@ class BervanHomepage extends React.Component {
       >
         <Metadata { ...this.props } />
         <NavBar
-          height="56px"
+          height={navBarHeight}
           { ...this.props }
         />
-        <WelcomeHeader
-          pageHeightLoss="56px"
-          scrollTo="test"
-          { ...this.props }
-        />
-        <Element name="test">
-          { content }
+        <Element name={documentFlow[0]}>
+          <WelcomeHeader
+            pageHeightLoss={navBarHeight}
+            scrollTo={documentFlow[1]}
+            isActive={() => this.setState({ activeDocument: 1 })}
+            { ...this.props }
+          />
+        </Element>
+        <Element name={documentFlow[1]}>
+          <BervanContentPage
+            pageHeightLoss={navBarHeight}
+            themes = { this.props.head.themes }
+            scrollTo={documentFlow[2]}
+            isActive={() => this.setState({ activeDocument: 1 })}
+            position="left"
+          />
+        </Element>
+        <Element name={documentFlow[2]}>
+          <BervanContentPage
+            pageHeightLoss={navBarHeight}
+            themes = { this.props.head.themes2 }
+            scrollTo={documentFlow[0]}
+            isActive={() => this.setState({ activeDocument: 2 })}
+            position="right"
+          />
         </Element>
       </div>
     )

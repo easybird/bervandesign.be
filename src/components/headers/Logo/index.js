@@ -8,7 +8,7 @@ const Logo = ({ height, margin }) => (
   >
     <img
       height={height}
-      src="/assets/img/logo/logo_placeholder.png"></img>
+      src="/assets/img/logo/bervan_logo.svg"></img>
   </div>);
 
 Logo.propTypes = {

@@ -1,0 +1,13 @@
+.contentPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.content {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}

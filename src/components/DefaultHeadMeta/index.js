@@ -14,9 +14,9 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
         ...props.meta ? props.meta : [],
       ] }
       link={ [
-        { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" },
         { rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons" },
-        { rel: "stylesheet", href: "/assets/css/material-icons.css"}
+        { rel: "stylesheet", href: "/assets/css/material-icons.css"},
+        { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" }
       ] }
       script={ [
         { src: "https://cdn.polyfill.io/v2/polyfill.min.js" },
@@ -27,7 +27,7 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
     { /* meta viewport safari/chrome/edge */ }
     <Helmet
       meta={ [ {
-        name: "viewport", content: "width=device-width, initial-scale=1",
+        name: "viewport", content: "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3",
       } ] }
     />
     <style>{ "@-ms-viewport { width: device-width; }" }</style>
