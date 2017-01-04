@@ -3,12 +3,38 @@ title: Bervan Design
 layout: BervanHomepage
 hero:
   images:
-    /assets/img/hero/hero_kantoor.jpg,
-    /assets/img/hero/hero_landelijk.jpg,
-    /assets/img/hero/hero_modern.jpg,
-    /assets/img/hero/hero_sfeer.jpg,
-    /assets/img/hero/hero_slaapkamer.jpg 
+    - /assets/img/hero/hero_kantoor.jpg
+    - /assets/img/hero/hero_landelijk.jpg
+    - /assets/img/hero/hero_modern.jpg
+    - /assets/img/hero/hero_sfeer.jpg
+    - /assets/img/hero/hero_slaapkamer.jpg 
   title: Creatief maatwerk
+themes:
+  - image: /assets/img/hero/hero_landelijk.jpg
+    title: Landelijk
+    link: "landelijk"
+    color: "blue"
+  - image: /assets/img/hero/hero_modern.jpg
+    title: Modern
+    link: "modern"
+    color: "pink"
+  - image: /assets/img/hero/hero_sfeer.jpg
+    title: Minimalistisch
+    link: "minimalistisch"
+    color: "black"
+themes2:
+  - image: /assets/img/hero/hero_landelijk.jpg
+    title: Woonruimte
+    link: "wonen"
+    color: "blue"
+  - image: /assets/img/hero/hero_kantoor.jpg
+    title: Kantoor
+    link: "kantoor"
+    color: "pink"
+  - image: /assets/img/hero/hero_slaapkamer.jpg
+    title: Sanitair
+    link: "sanitair"
+    color: "black"    
 cta:
   label: About this theme
   link: "about"

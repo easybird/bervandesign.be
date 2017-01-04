@@ -10,7 +10,7 @@ const WelcomeHeader = ({ scrollTo, isActive, head, pageHeightLoss }) => (
   >
     <div className={styles.banner}>
       <HeroImages autoplayInteval={5000}
-                  links={head.hero.images.split(',')}
+                  links={head.hero.images}
                   title={head.hero.title}
                   height="70vh"
                   random={true}
