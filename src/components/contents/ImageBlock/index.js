@@ -2,17 +2,18 @@ import React from 'react';
 import styles from './index.css';
 import { Link } from 'react-router';
 
-const ImageBlock = ({ url, title, link, position }) => (
+const ImageBlock = ({ url, title, link }) => (
   <figure
     className={styles.image}
-    style={{ backgroundImage: `url(${url})` }}
+    style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${url})`
+    }}
   >
     <Link to={link}>
       <span className={styles.emptySpan}></span>
-    </Link>;
-    <figcaption
-      style={position === 'right' ? {textAlign: 'right', left: 'inherit', right: '7%'} : {}}
-    >{title}
+    </Link>
+    <figcaption>
+      {title}
     </figcaption>
   </figure>
 );
@@ -20,8 +21,7 @@ const ImageBlock = ({ url, title, link, position }) => (
 ImageBlock.propTypes = {
   url: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isRequired,
-  link: React.PropTypes.string.isRequired,
-  position: React.PropTypes.string.isRequired
+  link: React.PropTypes.string.isRequired
 };
 
 export default ImageBlock;

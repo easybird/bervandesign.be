@@ -1,9 +1,14 @@
+@custom-media --tablet-portrait (480px < width <= 786px);
+@custom-media --tablet-landscape (786px < width <= 1024px);
+@custom-media --tablet-and-up (width > 480px);
+@custom-media --desktop-and-up (width > 1024px);
+
 figure {
   flex-basis: 33%;
   position: relative;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .image {
@@ -18,27 +23,31 @@ figure {
   top: 0;
   left: 0;
   z-index: 1;
-  /* fixes overlap error in IE7/8,
-     make sure you have an empty gif */
-  /*background-image: url('empty.gif');*/
   transition: all 1s;
 }
 
 .emptySpan:hover {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(255, 255, 255, .2);
 }
 
 figcaption {
   display: block;
   position: absolute;
   width: 100%;
-  left: 7%;
-  top: 20%;
-  text-align: left;
-  color: var(--colorBlack);
-  font-size: 3em;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: var(--colorWhite);
+  transform: translate(-50%, -50%);
+  text-shadow: 0 2px 0 black;
+  font-size: 300%;
+  letter-spacing: -2px;
   font-weight: bold;
-  letter-spacing: -5px;
-  line-height: 0.75;
-  font-family: sans-serif;
+}
+
+@media (--desktop-and-up) {
+  figure {
+    width: 75%;
+    align-self: center;
+  }
 }

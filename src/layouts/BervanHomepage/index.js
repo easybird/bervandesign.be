@@ -63,7 +63,6 @@ class BervanHomepage extends React.Component {
         <Metadata { ...this.props } />
         <NavBar
           height={navBarHeight}
-          { ...this.props }
         />
         <Element name={documentFlow[0]}>
           <WelcomeHeader
@@ -79,16 +78,14 @@ class BervanHomepage extends React.Component {
             themes = { this.props.head.themes }
             scrollTo={documentFlow[2]}
             isActive={() => this.setState({ activeDocument: 1 })}
-            position="left"
           />
         </Element>
         <Element name={documentFlow[2]}>
           <BervanContentPage
             pageHeightLoss={navBarHeight}
-            themes = { this.props.head.themes2 }
+            themes = { this.props.head.categories }
             scrollTo={documentFlow[0]}
             isActive={() => this.setState({ activeDocument: 2 })}
-            position="right"
           />
         </Element>
       </div>

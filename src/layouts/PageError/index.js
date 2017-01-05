@@ -1,40 +1,39 @@
-import React, { PropTypes } from "react"
-
-import Page from "../Page"
-
-import styles from "./index.css"
+import React, { PropTypes } from 'react';
+import NavBar from '../../components/headers/NavBar';
+import styles from './index.css';
+import bervanStyles from '../BervanHomepage/index.css';
 
 const PageError = ({ error, errorText }) => (
-  <Page
-    head={{
-      // hero credit: https://www.flickr.com/photos/mypubliclands/16101654539/
-      hero: "https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg",
-    }}
+  <div
+    className={ bervanStyles.bervanHomepage }
   >
-    <div className={ styles.container }>
-      <div className={ styles.oops }>{ "😱 Oooops!" }</div>
-      <div className={ styles.text }>
-        <p className={ styles.title }>
-          <strong>{ error }</strong>
-          { " " }
-          { errorText }
-        </p>
-        {
-          error === 404 &&
-          <div>
-            { "It seems you found a broken link. " }
-            { "Sorry about that. " }
-            <br />
-            { "Do not hesitate to report this page 😁." }
-          </div>
-        }
+      <NavBar
+        height='56px'
+      />
+      <div className={ styles.container }>
+        <div className={ styles.oops }>{ "😱 Deze pagina bestaat niet" }</div>
+        <div className={ styles.text }>
+          <p className={ styles.title }>
+            <strong>{ error }</strong>
+            { " " }
+            { errorText }
+          </p>
+          {
+            error === 404 &&
+            <div>
+              { "Het lijkt er op dat je een kapotte link vond. " }
+              { "Sorry daarvoor. " }
+              <br />
+              { "Aarzel niet om deze pagina te rapporteren 😁." }
+            </div>
+          }
+        </div>
       </div>
-    </div>
-  </Page>
+  </div>
 )
 
 PageError.propTypes = {
-  error: PropTypes.oneOfType([ PropTypes.number, PropTypes.string ]),
+  error: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   errorText: PropTypes.string,
 }
 

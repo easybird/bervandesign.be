@@ -19,7 +19,7 @@ themes:
   - image: /assets/img/hero/hero_sfeer.jpg
     title: Minimalistisch
     link: "minimalistisch"
-themes2:
+categories:
   - image: /assets/img/hero/hero_landelijk.jpg
     title: Woonruimte
     link: "wonen"

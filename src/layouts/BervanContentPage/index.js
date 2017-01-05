@@ -3,7 +3,7 @@ import styles from './index.css';
 import Pointer from '../../components/headers/Pointer';
 import ImageBlock from '../../components/contents/ImageBlock';
 
-const BervanContentPage = ({ themes, scrollTo, isActive, pageHeightLoss, position }) => {
+const BervanContentPage = ({ themes, scrollTo, isActive, pageHeightLoss }) => {
   const contentItems = themes.map((theme, index) =>
       <ImageBlock
         key={index}
@@ -11,7 +11,6 @@ const BervanContentPage = ({ themes, scrollTo, isActive, pageHeightLoss, positio
         link={theme.link}
         title={theme.title}
         color={theme.color}
-        position={position}
       />
   );
 
@@ -38,7 +37,6 @@ BervanContentPage.propTypes = {
   isActive: React.PropTypes.func,
   themes: PropTypes.array.isRequired,
   pageHeightLoss: React.PropTypes.string.isRequired,
-  position: React.PropTypes.string.isRequired
 };
 
 export default BervanContentPage;

@@ -1,14 +1,18 @@
 .footer {
+  color: var(--colorBlack);
+  background: var(--colorWhite);
   text-align: center;
 }
 
 .phenomicReference {
   font-size: 0.75rem;
-  opacity: 0.6;
-  color: inherit;
   text-decoration: none;
 }
 
 .phenomicReferenceName {
   font-weight: 100;
+}
+
+.footer a {
+  color: var(--colorBlack);
 }
