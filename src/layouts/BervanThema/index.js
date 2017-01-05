@@ -1,10 +1,9 @@
 import React from 'react';
 import Metadata from '../../components/head/Metadata';
 import NavBar from '../../components/headers/NavBar';
-import WelcomeHeader from '../../components/headers/WelcomeHeader';
 import { Element, Events } from 'react-scroll';
 import styles from './index.css';
-import BervanContentPage from '../BervanContentPage';
+import ProjectContentPage from '../ProjectContentPage';
 
 const documentFlow = ['header', 'content1', 'content2'];
 const navBarHeight = '56px';
@@ -65,27 +64,35 @@ class BervanHomepage extends React.Component {
           height={navBarHeight}
         />
         <Element name={documentFlow[0]}>
-          <WelcomeHeader
+          <ProjectContentPage
             pageHeightLoss={navBarHeight}
+            images = { this.props.head.images }
             scrollTo={documentFlow[1]}
             isActive={() => this.setState({ activeDocument: 1 })}
-            { ...this.props }
           />
         </Element>
         <Element name={documentFlow[1]}>
-          <BervanContentPage
+          <ProjectContentPage
             pageHeightLoss={navBarHeight}
-            themes = { this.props.head.themes }
+            images = { this.props.head.images }
             scrollTo={documentFlow[2]}
             isActive={() => this.setState({ activeDocument: 2 })}
           />
         </Element>
         <Element name={documentFlow[2]}>
-          <BervanContentPage
+          <ProjectContentPage
             pageHeightLoss={navBarHeight}
-            themes = { this.props.head.categories }
+            images = { this.props.head.images }
+            scrollTo={documentFlow[3]}
+            isActive={() => this.setState({ activeDocument: 3 })}
+          />
+        </Element>
+        <Element name={documentFlow[3]}>
+          <ProjectContentPage
+            pageHeightLoss={navBarHeight}
+            images = { this.props.head.images }
             scrollTo={documentFlow[0]}
-            isActive={() => this.setState({ activeDocument: 2 })}
+            isActive={() => this.setState({ activeDocument: 0 })}
           />
         </Element>
       </div>
