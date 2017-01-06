@@ -10,25 +10,25 @@ hero:
     - /assets/img/hero/hero_slaapkamer.jpg 
   title: Creatief maatwerk
 themes:
-  - image: /assets/img/hero/hero_landelijk.jpg
+  - image: /assets/img/thema/landelijk/_top.jpg
     title: Landelijk
-    link: "landelijk"
-  - image: /assets/img/hero/hero_modern.jpg
+    link: "/thema/landelijk"
+  - image: /assets/img/thema/modern/_top.jpg
     title: Modern
-    link: "modern"
-  - image: /assets/img/hero/hero_sfeer.jpg
+    link: "/thema/modern"
+  - image: /assets/img/thema/minimalistisch/_top.jpg
     title: Minimalistisch
-    link: "minimalistisch"
+    link: "/thema/minimalistisch"
 categories:
-  - image: /assets/img/hero/hero_landelijk.jpg
+  - image: /assets/img/categorie/wonen/_top.jpg
     title: Woonruimte
-    link: "wonen"
-  - image: /assets/img/hero/hero_kantoor.jpg
+    link: "/categorie/wonen"
+  - image: /assets/img/categorie/kantoor/_top.jpg
     title: Kantoor
-    link: "kantoor"
-  - image: /assets/img/hero/hero_slaapkamer.jpg
+    link: "/categorie/kantoor"
+  - image: /assets/img/categorie/sanitair/_top.jpg
     title: Sanitair
-    link: "sanitair"
+    link: "/categorie/sanitair"
 cta:
   label: About this theme
   link: "about"

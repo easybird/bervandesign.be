@@ -77,7 +77,7 @@ class BervanHomepage extends React.Component {
             pageHeightLoss={navBarHeight}
             themes = { this.props.head.themes }
             scrollTo={documentFlow[2]}
-            isActive={() => this.setState({ activeDocument: 1 })}
+            isActive={() => this.setState({ activeDocument: 2 })}
           />
         </Element>
         <Element name={documentFlow[2]}>

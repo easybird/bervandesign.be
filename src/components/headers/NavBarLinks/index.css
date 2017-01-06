@@ -19,12 +19,6 @@
   display: inline-flex;
 }
 
-.mainNav li {
-  display: inline-block;
-  flex: 1;
-  list-style: none;
-}
-
 .link:link,
 .link:visited {
   padding: 5px;
@@ -54,8 +48,9 @@
 
 .mainNav li {
   display: inline-block;
-  width: 100%;
   flex: 1;
+  list-style: none;
+  width: 100%;
   padding: 0 calc(var(--nav-item-padding) * 2);
 }
 

@@ -13,6 +13,7 @@ figure {
 
 .image {
   margin: 0 0 1%;
+  position: relative;
 }
 
 .emptySpan {
