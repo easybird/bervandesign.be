@@ -5,8 +5,8 @@ import { Element, Events } from 'react-scroll';
 import styles from './index.css';
 import ProjectContentPage from '../ProjectContentPage';
 
-const documentFlow = ['header', 'content1', 'content2'];
 const navBarHeight = '56px';
+const randomDocumentName = Math.random().toString(36).substring(8);
 
 class BervanHomepage extends React.Component {
 
@@ -45,15 +45,25 @@ class BervanHomepage extends React.Component {
   }
 
   render() {
-    const content = [];
-    for (let i = 0; i < 1000; i++) {
-      content.push(
-        <div key={i}>
-          hier komt content: {i}
-          <br/>
-        </div>
-      )
-    }
+
+    const projectContent = this.props.head.projects.map((project, index) => {
+        const nextElementIndex = index + 1;
+        const documentName = randomDocumentName + index;
+        const nextDocumentName = this.props.head.projects.length === nextElementIndex ? randomDocumentName + 0 : randomDocumentName + nextElementIndex;
+        return <Element
+          key={index}
+          name={documentName}
+        >
+          <ProjectContentPage
+            project={project}
+            pageHeightLoss={navBarHeight}
+            scrollTo={nextDocumentName}
+            isActive={() => this.setState({ activeDocument: nextElementIndex })}
+          />
+        </Element>
+      }
+    );
+
 
     return (
       <div
@@ -63,38 +73,7 @@ class BervanHomepage extends React.Component {
         <NavBar
           height={navBarHeight}
         />
-        <Element name={documentFlow[0]}>
-          <ProjectContentPage
-            pageHeightLoss={navBarHeight}
-            images = { this.props.head.images }
-            scrollTo={documentFlow[1]}
-            isActive={() => this.setState({ activeDocument: 1 })}
-          />
-        </Element>
-        <Element name={documentFlow[1]}>
-          <ProjectContentPage
-            pageHeightLoss={navBarHeight}
-            images = { this.props.head.images }
-            scrollTo={documentFlow[2]}
-            isActive={() => this.setState({ activeDocument: 2 })}
-          />
-        </Element>
-        <Element name={documentFlow[2]}>
-          <ProjectContentPage
-            pageHeightLoss={navBarHeight}
-            images = { this.props.head.images }
-            scrollTo={documentFlow[3]}
-            isActive={() => this.setState({ activeDocument: 3 })}
-          />
-        </Element>
-        <Element name={documentFlow[3]}>
-          <ProjectContentPage
-            pageHeightLoss={navBarHeight}
-            images = { this.props.head.images }
-            scrollTo={documentFlow[0]}
-            isActive={() => this.setState({ activeDocument: 0 })}
-          />
-        </Element>
+        {projectContent}
       </div>
     )
   }

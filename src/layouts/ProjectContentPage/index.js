@@ -2,14 +2,19 @@ import React, { PropTypes } from 'react';
 import styles from './index.css';
 import Pointer from '../../components/headers/Pointer';
 import PhotoGrid from '../../components/PhotoGrid';
+import TitleBox from '../../components/TitleBox';
 
-const ProjectContentPage = ({ images, scrollTo, isActive, pageHeightLoss }) => (
+const ProjectContentPage = ({ project, scrollTo, isActive, pageHeightLoss }) => (
   <div
     className={styles.contentPage}
     style={{ height: `calc(100vh - ${pageHeightLoss})` }}
   >
+    {project.title &&
+    <TitleBox
+      title={project.title}
+    />}
     <div className={styles.content}>
-      <PhotoGrid images={images}/>
+      <PhotoGrid images={project.images}/>
     </div>
     <Pointer
       scrollTo={scrollTo}
@@ -21,7 +26,7 @@ const ProjectContentPage = ({ images, scrollTo, isActive, pageHeightLoss }) => (
 ProjectContentPage.propTypes = {
   scrollTo: React.PropTypes.string,
   isActive: React.PropTypes.func,
-  images: PropTypes.array.isRequired,
+  project: PropTypes.object.isRequired,
   pageHeightLoss: React.PropTypes.string.isRequired,
 };
 
