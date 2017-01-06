@@ -10,42 +10,37 @@ hero:
     - /assets/img/hero/hero_slaapkamer.jpg 
   title: Landelijke stijl
 projects:
-  - title: Totaalproject woning Dentergem
+  - title: Totaalproject woning Kuurne
     images:
-      - src: /assets/img/hero/hero_landelijk.jpg
-        title: Landelijk
-      - src: /assets/img/hero/hero_modern.jpg
-        title: Modern
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch
-      - src: /assets/img/hero/hero_kantoor.jpg
-        title: Landelijk
-      - src: /assets/img/hero/hero_slaapkamer.jpg
-        title: Modern
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch   
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch 
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch
-  - title: Ander project
+      - src: /assets/img/thema/landelijk/kuurne/_top.jpg
+      - src: /assets/img/thema/landelijk/kuurne/kuurne6.jpg
+      - src: /assets/img/thema/landelijk/kuurne/kuurne21.jpg
+      - src: /assets/img/thema/landelijk/kuurne/kuurne7.jpg
+      - src: /assets/img/thema/landelijk/kuurne/kuurne13.jpg
+      - src: /assets/img/thema/landelijk/kuurne/kuurne19.jpg
+      - src: /assets/img/thema/landelijk/kuurne/kuurne20.jpg
+  - title: 
     images:
-      - src: /assets/img/hero/hero_landelijk.jpg
-        title: Landelijk
-      - src: /assets/img/hero/hero_modern.jpg
-        title: Modern
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch
-      - src: /assets/img/hero/hero_kantoor.jpg
-        title: Landelijk
-      - src: /assets/img/hero/hero_slaapkamer.jpg
-        title: Modern
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch   
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch 
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch        
+      - src: /assets/img/thema/landelijk/wallican/_top.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican1.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican2.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican3.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican4.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican5.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican6.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican7.jpg
+      - src: /assets/img/thema/landelijk/wallican/wallican8.jpg
+  - title: Woonproject Damme
+    images:
+      - src: /assets/img/thema/landelijk/damme/_top.jpg
+      - src: /assets/img/thema/landelijk/damme/damme1.jpg
+      - src: /assets/img/thema/landelijk/damme/damme2.jpg
+      - src: /assets/img/thema/landelijk/damme/damme3.jpg
+      - src: /assets/img/thema/landelijk/damme/damme4.jpg
+      - src: /assets/img/thema/landelijk/damme/damme5.jpg
+      - src: /assets/img/thema/landelijk/damme/damme6.jpg
+      - src: /assets/img/thema/landelijk/damme/damme7.jpg
+      
 categories:
   - image: /assets/img/hero/hero_landelijk.jpg
     title: Woonruimte

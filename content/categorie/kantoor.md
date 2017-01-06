@@ -1,46 +1,29 @@
 ---
 title: Landelijk
 layout: BervanThema
-hero:
-  images:
-    - /assets/img/hero/hero_kantoor.jpg
-    - /assets/img/hero/hero_landelijk.jpg
-    - /assets/img/hero/hero_modern.jpg
-    - /assets/img/hero/hero_sfeer.jpg
-    - /assets/img/hero/hero_slaapkamer.jpg 
-  title: Landelijke stijl
 projects:
-  - title: Totaalproject woning Dentergem
+  - title: Kantoren Voka
     images:
-      - src: /assets/img/hero/hero_landelijk.jpg
-        title: Landelijk
-      - src: /assets/img/hero/hero_modern.jpg
-        title: Modern
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch
-      - src: /assets/img/hero/hero_kantoor.jpg
-        title: Landelijk
-      - src: /assets/img/hero/hero_slaapkamer.jpg
-        title: Modern
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch   
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch 
-      - src: /assets/img/hero/hero_sfeer.jpg
-        title: Minimalistisch
-categories:
-  - image: /assets/img/hero/hero_landelijk.jpg
-    title: Woonruimte
-    link: "/categorie/wonen"
-  - image: /assets/img/hero/hero_kantoor.jpg
-    title: Kantoor
-    link: "/categorie/kantoor"
-  - image: /assets/img/hero/hero_slaapkamer.jpg
-    title: Sanitair
-    link: "/categorie/sanitair"
-cta:
-  label: About this theme
-  link: "about"
+      - src: /assets/img/categorie/kantoor/voka/voka1.jpg
+      - src: /assets/img/categorie/kantoor/voka/voka2.jpg
+      - src: /assets/img/categorie/kantoor/voka/voka3n.jpg
+      - src: /assets/img/categorie/kantoor/voka/voka10.jpg
+  - title: Kantoor Tanghe
+    images:
+      - src: /assets/img/categorie/kantoor/tanghe/tanghe2.jpg
+      - src: /assets/img/categorie/kantoor/tanghe/tanghe4.jpg
+      - src: /assets/img/categorie/kantoor/tanghe/tanghe11.jpg
+      - src: /assets/img/categorie/kantoor/tanghe/tanghe13.jpg
+  - title: Hires Brugge
+    images:
+      - src: /assets/img/categorie/kantoor/hires/hires1.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires2.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires3.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires4.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires5.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires6.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires7.jpg
+      - src: /assets/img/categorie/kantoor/hires/hires8.jpg
 ---
 
 Hier kan tekst komen...
