@@ -7,7 +7,7 @@ import styles from './index.css';
 import BervanContentPage from '../BervanContentPage';
 
 const documentFlow = ['header', 'content1', 'content2'];
-const navBarHeight = '56px';
+const navBarHeight = '3em';
 
 class BervanHomepage extends React.Component {
 

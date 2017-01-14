@@ -11,7 +11,7 @@ const NavBarLinks = ({ isVisible }) => (
         className={ styles.link }
         to="/"
       >
-        { "Home" }
+        { "Over Bervan design" }
       </Link>
     </li>
     <li>

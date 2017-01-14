@@ -15,16 +15,37 @@
 
 .navBarWrapper {
   background-color: var(--colorWhite);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
 }
 
+.topText {
+  text-transform: uppercase;
+  word-spacing: 5px;
+}
+
+.logo {
+  padding-right: 15px;
+  font-size: 130%;
+  word-spacing: 5px;
+}
+
+.title {
+  font-size: 95%;
+}
+
 .mobileWrapper {
   display: flex;
-  align-items: center;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mobileBarLinksWrapper {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -37,23 +58,10 @@
   display: block;
 }
 
-.box {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.leftPlaceholder {
-  margin-right: auto;
-  visibility: hidden;
-}
-
-.center {
-}
-
 .right {
   margin-left: auto;
   justify-content: flex-end;
+  align-self: baseline;
 }
 
 @media (--tablet-landscape-and-up) {
@@ -61,9 +69,20 @@
     display: none;
   }
 
+  .mobileBarLinksWrapper {
+    display: none;
+  }
+
   .siteWrapper {
     display: flex;
+    height: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 0.5em;
+    padding-right: 3em;
+  }
+
+  .right {
+    align-self: inherit;
   }
 }

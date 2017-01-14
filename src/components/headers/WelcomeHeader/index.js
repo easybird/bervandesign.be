@@ -12,11 +12,10 @@ const WelcomeHeader = ({ scrollTo, isActive, head, pageHeightLoss }) => (
       <HeroImages autoplayInteval={5000}
                   links={head.hero.images}
                   title={head.hero.title}
-                  height="70vh"
+                  height="75vh"
                   random={true}
       />
     </div>
-    <div></div>
     <Pointer
       scrollTo={scrollTo}
       isActive={isActive}

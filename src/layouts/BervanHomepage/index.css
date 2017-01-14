@@ -15,7 +15,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 300;
+  font-weight: 400;
   color: var(--colorPrimary);
   padding-bottom: 5%;
   letter-spacing: 0.5px;
@@ -57,11 +57,13 @@ p {
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
+    margin: 0 3em;
   }
 }
 
 @media (--tablet-portrait) {
   .bervanHomepage {
     font-size: 0.9rem;
+    margin: 0;
   }
 }

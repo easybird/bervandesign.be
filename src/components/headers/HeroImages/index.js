@@ -48,7 +48,7 @@ export default class HeroImages extends Component {
 
   render() {
     const { slide } = this.state;
-    const { title, height } = this.props;
+    const { height } = this.props;
 
     const li = this.props.links.map(
       (link, index) =>
@@ -75,7 +75,6 @@ export default class HeroImages extends Component {
           {li}
         </ul>
         <div className={styles.heroTextBox}>
-          <h1>{title}</h1>
         </div>
       </div>
     );
