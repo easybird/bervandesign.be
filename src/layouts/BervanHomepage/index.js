@@ -63,13 +63,6 @@ class BervanHomepage extends React.Component {
           />
         </Element>
         <Element name={documentFlow[1]}>
-          <div className={styles.parent}>
-            <div style={{ textTransform: 'uppercase'}}>
-              Onze nieuwe website is nog in aanmaak
-            </div>
-          </div>
-        </Element>
-        <Element name={documentFlow[1]}>
           <BervanContentPage
             pageHeightLoss={navBarHeight}
             themes={ this.props.head.themes }
