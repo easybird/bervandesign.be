@@ -46,16 +46,6 @@ class BervanHomepage extends React.Component {
   }
 
   render() {
-    const content = [];
-    for (let i = 0; i < 1000; i++) {
-      content.push(
-        <div key={i}>
-          hier komt content: {i}
-          <br/>
-        </div>
-      )
-    }
-
     return (
       <div
         className={ styles.bervanHomepage }
@@ -73,9 +63,16 @@ class BervanHomepage extends React.Component {
           />
         </Element>
         <Element name={documentFlow[1]}>
+          <div className={styles.parent}>
+            <div style={{ textTransform: 'uppercase'}}>
+              Onze nieuwe website is nog in aanmaak
+            </div>
+          </div>
+        </Element>
+        <Element name={documentFlow[1]}>
           <BervanContentPage
             pageHeightLoss={navBarHeight}
-            themes = { this.props.head.themes }
+            themes={ this.props.head.themes }
             scrollTo={documentFlow[2]}
             isActive={() => this.setState({ activeDocument: 2 })}
           />
@@ -83,7 +80,7 @@ class BervanHomepage extends React.Component {
         <Element name={documentFlow[2]}>
           <BervanContentPage
             pageHeightLoss={navBarHeight}
-            themes = { this.props.head.categories }
+            themes={ this.props.head.categories }
             scrollTo={documentFlow[0]}
             isActive={() => this.setState({ activeDocument: 2 })}
           />

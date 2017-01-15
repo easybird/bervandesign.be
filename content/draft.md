@@ -12,23 +12,23 @@ hero:
 themes:
   - image: /assets/img/thema/landelijk/_top.jpg
     title: Landelijk
-    link: "/under-construction"
+    link: "/thema/landelijk"
   - image: /assets/img/thema/modern/_top.jpg
     title: Modern
-    link: "/under-construction"
+    link: "/thema/modern"
   - image: /assets/img/thema/minimalistisch/_top.jpg
     title: Minimalistisch
-    link: "/under-construction"
+    link: "/thema/minimalistisch"
 categories:
   - image: /assets/img/categorie/wonen/_top.jpg
     title: Woonruimte
-    link: "/under-construction"
+    link: "/categorie/wonen"
   - image: /assets/img/categorie/kantoor/_top.jpg
     title: Kantoor
-    link: "/under-construction"
+    link: "/categorie/kantoor"
   - image: /assets/img/categorie/sanitair/_top.jpg
     title: Sanitair
-    link: "/under-construction"
+    link: "/categorie/sanitair"
 cta:
   label: About this theme
   link: "about"
