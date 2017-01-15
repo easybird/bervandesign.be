@@ -32,10 +32,6 @@
   word-spacing: 5px;
 }
 
-.title {
-  font-size: 95%;
-}
-
 .mobileWrapper {
   display: flex;
   height: 100%;

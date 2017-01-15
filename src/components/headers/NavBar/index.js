@@ -17,7 +17,7 @@ class NavBar extends React.Component {
     const { height } = this.props;
 
     const logo = <span className={styles.logo}>Bervan design</span>;
-    const title = <span className={styles.title}>Creatief maatwerk</span>;
+    const title = <span>Creatief maatwerk</span>;
 
     const mobileBar =
       <div

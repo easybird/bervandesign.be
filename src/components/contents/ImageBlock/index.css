@@ -32,18 +32,15 @@ figure {
 }
 
 figcaption {
+  background-color: rgba(255, 255, 255, .5);
+  text-transform: uppercase;
   display: block;
   position: absolute;
   width: 100%;
-  left: 50%;
-  top: 50%;
-  text-align: center;
-  color: var(--colorWhite);
-  transform: translate(-50%, -50%);
-  text-shadow: 0 2px 0 black;
-  font-size: 300%;
-  letter-spacing: -2px;
-  font-weight: bold;
+  right: 0;
+  bottom: 0;
+  padding: 1.5%;
+  text-align: right;
 }
 
 @media (--desktop-and-up) {
