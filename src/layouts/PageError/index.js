@@ -11,12 +11,10 @@ const PageError = ({ error, errorText }) => (
         height='56px'
       />
       <div className={ styles.container }>
-        <div className={ styles.oops }>{ "😱 Deze pagina bestaat niet" }</div>
+        <div className={ styles.oops }>{ "Deze site is in opbouw" }</div>
         <div className={ styles.text }>
           <p className={ styles.title }>
-            <strong>{ error }</strong>
             { " " }
-            { errorText }
           </p>
           {
             error === 404 &&
@@ -24,7 +22,7 @@ const PageError = ({ error, errorText }) => (
               { "Het lijkt er op dat je een kapotte link vond. " }
               { "Sorry daarvoor. " }
               <br />
-              { "Aarzel niet om deze pagina te rapporteren 😁." }
+              { "Aarzel niet om deze pagina te rapporteren." }
             </div>
           }
         </div>
