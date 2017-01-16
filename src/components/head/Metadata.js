@@ -35,6 +35,10 @@ const Metadata = ({
     { name: "theme-color", content: "#ffffff"}
   ];
 
+  const scripts = [
+    { src: "assets/analytics/googleAnalytics.js" },
+  ];
+
   const favicons = [
     // created by realfavicongenerator.net
     { "rel": "apple-touch-icon", "sizes": "120x120", "href": "/assets/img/favicon/apple-touch-icon.png" },
@@ -49,6 +53,7 @@ const Metadata = ({
         link={ favicons }
         title={ metaTitle }
         meta={ meta }
+        script={ scripts }
       />
   )
 };

@@ -44,7 +44,6 @@
 
 .mainNav li {
   list-style: none;
-  padding: 0 2.5em;
   width: 100%;
 }
 
@@ -63,10 +62,16 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
+    padding-right: 3em;
   }
 
   .mainNav li {
     height: 100%;
     width: inherit;
+    padding: 0 0.8em;
+  }
+
+  .mainNav li:last-child {
+    padding: 0;
   }
 }
