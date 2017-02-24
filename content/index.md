@@ -4,10 +4,12 @@ layout: BervanHomepage
 hero:
   images:
     - /assets/img/hero/hero_kantoor.jpg
+    - /assets/img/hero/Hires-Bervan_MW19536.jpg
     - /assets/img/hero/hero_landelijk.jpg
+    - /assets/img/hero/Hires-Hertsberge-_MW16062.jpg
     - /assets/img/hero/hero_modern.jpg
-    - /assets/img/hero/hero_sfeer.jpg
-    - /assets/img/hero/hero_slaapkamer.jpg 
+    - /assets/img/hero/Hires-Bervan_MW19524.jpg
+    - /assets/img/hero/Hires-Hertsberge-_MW16081.jpg
   title: Creatief maatwerk
 themes:
   - image: /assets/img/thema/landelijk/_top.jpg

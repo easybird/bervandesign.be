@@ -4,7 +4,6 @@ import NavBar from '../../components/headers/NavBar';
 import WelcomeHeader from '../../components/headers/WelcomeHeader';
 import { Element, Events } from 'react-scroll';
 import styles from './index.css';
-import BervanContentPage from '../BervanContentPage';
 
 const documentFlow = ['header', 'content1', 'content2'];
 const navBarHeight = '3em';
@@ -57,25 +56,7 @@ class BervanHomepage extends React.Component {
         <Element name={documentFlow[0]}>
           <WelcomeHeader
             pageHeightLoss={navBarHeight}
-            scrollTo={documentFlow[1]}
-            isActive={() => this.setState({ activeDocument: 1 })}
             { ...this.props }
-          />
-        </Element>
-        <Element name={documentFlow[1]}>
-          <BervanContentPage
-            pageHeightLoss={navBarHeight}
-            themes={ this.props.head.themes }
-            scrollTo={documentFlow[2]}
-            isActive={() => this.setState({ activeDocument: 2 })}
-          />
-        </Element>
-        <Element name={documentFlow[2]}>
-          <BervanContentPage
-            pageHeightLoss={navBarHeight}
-            themes={ this.props.head.categories }
-            scrollTo={documentFlow[0]}
-            isActive={() => this.setState({ activeDocument: 2 })}
           />
         </Element>
       </div>

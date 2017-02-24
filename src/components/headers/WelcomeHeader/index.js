@@ -1,31 +1,34 @@
 import React, { PropTypes } from 'react';
 import HeroImages from '../HeroImages';
 import styles from './index.css';
-import Pointer from '../Pointer';
 
-const WelcomeHeader = ({ scrollTo, isActive, head, pageHeightLoss }) => (
+const WelcomeHeader = ({ head, pageHeightLoss }) => (
   <header
     className={styles.welcomeHeader}
     style={{ height: `calc(100vh - ${pageHeightLoss})` }}
   >
     <div className={styles.banner}>
-      <HeroImages autoplayInteval={5000}
+      <HeroImages autoplayInteval={3000}
                   links={head.hero.images}
                   title={head.hero.title}
                   height="75vh"
                   random={true}
       />
     </div>
-    <Pointer
-      scrollTo={scrollTo}
-      isActive={isActive}
-    />
+    <div style={{margin: "0 auto",
+      cursor: "pointer",
+      flexGrow: 1,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textTransform: 'uppercase'
+    }}>
+      Deze vernieuwde website is nog in aanmaak
+    </div>
   </header>
 );
 
 WelcomeHeader.propTypes = {
-  scrollTo: React.PropTypes.string,
-  isActive: React.PropTypes.func,
   head: PropTypes.object.isRequired,
   pageHeightLoss: React.PropTypes.string.isRequired
 };
