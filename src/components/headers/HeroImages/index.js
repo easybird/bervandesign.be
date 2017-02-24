@@ -55,7 +55,7 @@ export default class HeroImages extends Component {
         <li
           key={index}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.6)), url(${link})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url(${link})`,
             width: '100%',
             float: 'left',
             marginRight: '-100%',
