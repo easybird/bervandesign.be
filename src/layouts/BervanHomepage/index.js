@@ -53,12 +53,12 @@ class BervanHomepage extends React.Component {
         <NavBar
           height={navBarHeight}
         />
-        <Element name={documentFlow[0]}>
-          <WelcomeHeader
-            pageHeightLoss={navBarHeight}
-            { ...this.props }
-          />
-        </Element>
+          <Element name={documentFlow[0]}>
+            <WelcomeHeader
+              pageHeightLoss={navBarHeight}
+              { ...this.props }
+            />
+          </Element>
       </div>
     )
   }

@@ -6,6 +6,7 @@ import Page from './layouts/Page';
 import PageError from './layouts/PageError';
 import Homepage from './layouts/Homepage';
 import BervanHomepage from './layouts/BervanHomepage';
+import BervanDraftHomepage from './layouts/BervanDraftHomepage';
 import BervanThema from './layouts/BervanThema';
 import Post from './layouts/Post';
 
@@ -52,6 +53,7 @@ const PageContainer = (props) => (
       PageError,
       Homepage,
       BervanHomepage,
+      BervanDraftHomepage,
       BervanThema,
       Post,
     }}

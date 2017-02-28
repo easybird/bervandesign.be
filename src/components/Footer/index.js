@@ -1,21 +1,19 @@
-import React from "react"
-
-import styles from "./index.css"
+import React from 'react';
+import styles from './index.css';
 
 const Footer = () => (
   <footer className={ styles.footer }>
-    <p>
+    <div className={ styles.companyTag }>
       <a
         href={ "http://easybird.be" }
         target="_blank"
         className={ styles.phenomicReference }
       >
-        { "Made by " }
         <span className={ styles.phenomicReferenceName }>
-          {  `Easybird.be` }
+          {  `Made by Easybird.be` }
         </span>
       </a>
-    </p>
+    </div>
   </footer>
 )
 

@@ -1,7 +1,21 @@
 .footer {
-  color: var(--colorBlack);
-  background: var(--colorWhite);
   text-align: center;
+  position: fixed;
+  z-index: 999;
+  /* stretch */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: var(--colorNeutralDark);
+  background-color: var(--colorNeutralLight);
+  height: 2.5em;
+}
+
+.companyTag {
+  font-size: 50%;
+  margin: auto 0;
+  float: right;
+  padding-right: 2.5em;
 }
 
 .phenomicReference {

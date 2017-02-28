@@ -48,7 +48,6 @@ export default class HeroImages extends Component {
 
   render() {
     const { slide } = this.state;
-    const { height } = this.props;
 
     const li = this.props.links.map(
       (link, index) =>
@@ -61,7 +60,7 @@ export default class HeroImages extends Component {
             marginRight: '-100%',
             position: 'relative',
             display: 'block',
-            height: `${height}`,
+            height: 'calc(100vh - 5em)',
             zIndex: `${ slide == index ? 2 : 1}`
           }}
           className={`${styles.slide} ${slide == index ? styles.visible : styles.invisible}`}

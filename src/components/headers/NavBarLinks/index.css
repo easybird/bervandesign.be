@@ -45,6 +45,7 @@
 .mainNav li {
   list-style: none;
   width: 100%;
+  padding: 50px;
 }
 
 .mainNav li:hover,
@@ -62,7 +63,6 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    padding-right: 3em;
   }
 
   .mainNav li {
@@ -73,5 +73,11 @@
 
   .mainNav li:last-child {
     padding: 0;
+  }
+}
+
+@media (--desktop-and-up) {
+  .mainNav li {
+    padding: 0 1.2em;
   }
 }

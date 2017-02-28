@@ -7,7 +7,7 @@ import styles from './index.css';
 
 const documentFlow = ['header', 'content1', 'content2'];
 
-class BervanHomepage extends React.Component {
+class BervanAutoScroll extends React.Component {
 
   constructor(props) {
     super(props);
@@ -165,6 +165,6 @@ class BervanHomepage extends React.Component {
   }
 }
 
-BervanHomepage.propTypes = {};
+BervanAutoScroll.propTypes = {};
 
-export default BervanHomepage;
+export default BervanAutoScroll;
