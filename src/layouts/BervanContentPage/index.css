@@ -1,12 +1,12 @@
 .contentPage {
-  height: 100vh;
+  height: calc(100vh - 2.5em);
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
 .content {
-  height: 90%;
+  height: calc(100% - 2.5em);
   display: flex;
   flex-direction: column;
   align-items: stretch;

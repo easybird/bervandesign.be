@@ -12,15 +12,15 @@ hero:
     - /assets/img/hero/Hires-Hertsberge-_MW16081.jpg 
   title: Creatief maatwerk
 themes:
-  - image: /assets/img/thema/landelijk/_top.jpg
-    title: Landelijk
-    link: "/thema/landelijk"
-  - image: /assets/img/thema/modern/_top.jpg
-    title: Modern
-    link: "/thema/modern"
   - image: /assets/img/thema/minimalistisch/_top.jpg
     title: Minimalistisch
     link: "/thema/minimalistisch"
+  - image: /assets/img/thema/modern/_top.jpg
+    title: Eigentijds
+    link: "/thema/modern"
+  - image: /assets/img/thema/landelijk/_top.jpg
+    title: Landelijk
+    link: "/thema/landelijk"
 categories:
   - image: /assets/img/categorie/wonen/_top.jpg
     title: Woonruimte

@@ -9,6 +9,7 @@
   height: 2.5em;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 99;
 }
 
 .siteWrapper {

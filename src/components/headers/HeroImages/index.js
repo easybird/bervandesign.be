@@ -65,6 +65,9 @@ export default class HeroImages extends Component {
           }}
           className={`${styles.slide} ${slide == index ? styles.visible : styles.invisible}`}
         >
+          <img className={styles.logo}
+            src="/assets/img/logo/bervan_logo.svg"
+          />
         </li>
     );
 
@@ -84,6 +87,5 @@ HeroImages.propTypes = {
   title: React.PropTypes.string,
   random: React.PropTypes.bool,
   links: React.PropTypes.array.isRequired,
-  height: React.PropTypes.string.isRequired,
   autoplayInteval: React.PropTypes.number.isRequired
 };

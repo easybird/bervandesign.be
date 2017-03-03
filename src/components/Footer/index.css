@@ -9,13 +9,13 @@
   color: var(--colorNeutralDark);
   background-color: var(--colorNeutralLight);
   height: 2.5em;
+  padding-left: 2.5em;
 }
 
 .companyTag {
   font-size: 50%;
   margin: auto 0;
-  float: right;
-  padding-right: 2.5em;
+  float: left;
 }
 
 .phenomicReference {

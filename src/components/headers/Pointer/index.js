@@ -47,16 +47,16 @@ class Pointer extends React.Component {
         to={scrollTo}
         spy={true}
         smooth={true}
-        offset={-70}
+        offset={0}
         duration={1000}
         onSetActive={isActive}
         className={styles.pointer}
         style={{
           cursor: "pointer",
           flexGrow: 1,
-          display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          display: this.props.hide ? 'none' : 'flex'
         }}
       >
         <div
@@ -76,7 +76,8 @@ class Pointer extends React.Component {
 
 Pointer.propTypes = {
   scrollTo: React.PropTypes.string,
-  isActive: React.PropTypes.func
+  isActive: React.PropTypes.func,
+  hide: React.PropTypes.bool
 };
 
 export default Pointer;

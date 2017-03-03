@@ -5,17 +5,13 @@ import styles from './index.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import WelcomeHeader from '../../components/headers/WelcomeHeader';
-
-const documentFlow = ['header', 'content1', 'content2'];
+import BervanContentPage from '../BervanContentPage';
+const documentFlow = ['page1', 'page2'];
 
 class BervanDraftHomepage extends React.Component {
 
   constructor(props) {
     super(props);
-    this.scrollTo = (divName) => this._scrollTo(divName);
-    this.scrollUp = (event) => this._scrollUp(event);
-    this.scrollDown = (event) => this._scrollDown(event);
-    this.cancelEvent = (event) => this._cancelEvent(event);
     this.state = {
       isScrolling: false,
       activeDocument: 0
@@ -32,8 +28,7 @@ class BervanDraftHomepage extends React.Component {
 
     Events.scrollEvent.register('end', () => {
       this.setState({
-        activeDocument: typeof this.state.nextDocument !== 'undefined' ? this.state.nextDocument : this.state.activeDocument,
-        nextDocument: undefined,
+        activeDocument: this.state.activeDocument + 1,
         isScrolling: false
       });
     });
@@ -50,15 +45,27 @@ class BervanDraftHomepage extends React.Component {
         className={ styles.bervanHomepage }
       >
         <Metadata { ...this.props } />
-        <Header />
+        <Header/>
         <div className={styles.content}>
-          <Element name={documentFlow[0]}>
-            <WelcomeHeader
-              { ...this.props }
-            />
-          </Element>
+          <div className={`${styles.page} ${styles.panels}`}>
+            <Element name={documentFlow[0]}>
+              <WelcomeHeader
+                { ...this.props }
+              />
+            </Element>
+          </div>
+          <div className={`${styles.panels} ${styles.next}`}>
+            <Element name={documentFlow[1]}>
+              <BervanContentPage
+                themes={ this.props.head.themes }
+              />
+            </Element>
+          </div>
         </div>
-        <Footer />
+        <Footer
+          scrollTo={documentFlow[this.state.activeDocument === documentFlow.length-1 ? 0 : this.state.activeDocument + 1]}
+          hide={this.state.activeDocument === 1}
+        />
       </div>
     )
   }
