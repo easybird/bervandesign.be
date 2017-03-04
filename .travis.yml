@@ -20,7 +20,7 @@ deploy:
   bucket: "bervan-draft"
   skip_cleanup: true
   local_dir: dist
-  region: Frankfurt
+  region: eu-central-1
   on:
     branch: version2
     node: '6'
