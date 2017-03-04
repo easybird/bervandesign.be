@@ -4,7 +4,7 @@
 @custom-media --tablet-landscape-and-up (width > 786px);
 @custom-media --desktop-and-up (width > 1024px);
 
-.bervanHomepage {
+.bervanContainer {
   font-size: 0.7rem;
   font-weight: 300;
   line-height: 1.3rem;
@@ -82,7 +82,7 @@ p {
     word-spacing: 2px;
   }
 
-  .bervanHomepage {
+  .bervanContainer {
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
@@ -90,7 +90,7 @@ p {
 }
 
 @media (--tablet-portrait) {
-  .bervanHomepage {
+  .bervanContainer {
     font-size: 0.9rem;
     margin: 0;
   }

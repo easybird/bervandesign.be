@@ -1,6 +1,7 @@
 @custom-media --tablet-portrait (480px < width <= 786px);
 @custom-media --tablet-landscape (786px < width <= 1024px);
 @custom-media --tablet-and-up (width > 480px);
+@custom-media --tablet-landscape-and-up (width > 786px);
 @custom-media --desktop-and-up (width > 1024px);
 
 .bervanHomepage {
@@ -9,6 +10,34 @@
   line-height: 1.3rem;
   display: flex;
   flex-direction: column;
+}
+
+.content {
+  position: absolute;
+  top: 3em;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 6em)
+}
+
+.panels {
+  position: relative;
+  height: calc(100vh - 6em);
+  min-height: calc(100vh - 6em);
+  z-index: 90;
+  background-color: var(--colorNeutralLight);
+}
+
+.page {
+  position: fixed;
+  background-color: yellow;
+  top: 3em;
+  left: 0;
+  right: 0;
+}
+
+.next {
+  margin-top: 100vh;
 }
 
 h1,
@@ -57,7 +86,6 @@ p {
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
-    margin: 0 3em;
   }
 }
 
@@ -65,5 +93,17 @@ p {
   .bervanHomepage {
     font-size: 0.9rem;
     margin: 0;
+  }
+}
+
+@media (--tablet-landscape-and-up) {
+  .content {
+    left: 3em;
+    right: 3em;
+  }
+
+  .page {
+    left: 3em;
+    right: 3em;
   }
 }

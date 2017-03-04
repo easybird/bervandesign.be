@@ -4,17 +4,15 @@ import { Element, Events } from 'react-scroll';
 import styles from './index.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import WelcomeHeader from '../../components/headers/WelcomeHeader';
-import BervanContentPage from '../BervanContentPage';
-const documentFlow = ['page1', 'page2'];
+const documentName = 'page';
 
-class BervanDraftHomepage extends React.Component {
+class BervanContainer extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       isScrolling: false,
-      activeDocument: 0,
+      activeDocument: 1,
       pageTop: true
     };
   }
@@ -48,29 +46,16 @@ class BervanDraftHomepage extends React.Component {
   render() {
     return (
       <div
-        className={ styles.bervanHomepage }
+        className={ styles.bervanContainer }
       >
         <Metadata { ...this.props } />
         <Header />
         <div className={styles.content}>
-          <div className={`${styles.page} ${styles.panels}`}>
-            <Element name={documentFlow[0]}>
-              <WelcomeHeader
-                { ...this.props }
-              />
-            </Element>
-          </div>
-          <div className={`${styles.panels} ${styles.next}`}>
-            <Element name={documentFlow[1]}>
-              <BervanContentPage
-                themes={ this.props.head.themes }
-              />
-            </Element>
-          </div>
+          { this.props.children.map((child, index) => <Element key={index} name={`${documentName}${index+1}`}>{ child }</Element>) }
         </div>
         <Footer
-          scrollTo={documentFlow[this.state.activeDocument === documentFlow.length - 1 ? 0 : this.state.activeDocument + 1]}
-          hide={this.state.activeDocument === 1 || !this.state.pageTop}
+          scrollTo={`${documentName}${[this.state.activeDocument === this.props.children.length ? 1 : this.state.activeDocument + 1]}`}
+          hide={this.state.activeDocument === this.props.children.length || !this.state.pageTop}
         />
       </div>
     )
@@ -83,8 +68,9 @@ class BervanDraftHomepage extends React.Component {
   }
 }
 
-BervanDraftHomepage.propTypes = {
-  head: React.PropTypes.object.isRequired
+BervanContainer.propTypes = {
+  head: React.PropTypes.object.isRequired,
+  children: React.PropTypes.array.isRequired
 };
 
-export default BervanDraftHomepage;
+export default BervanContainer;

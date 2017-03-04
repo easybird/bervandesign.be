@@ -1,6 +1,6 @@
 ---
 title: Bervan Design
-layout: BervanDraftHomepage
+layout: BervanHomepage
 hero:
   images:
     - /assets/img/hero/hero_kantoor.jpg

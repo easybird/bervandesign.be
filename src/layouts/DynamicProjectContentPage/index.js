@@ -3,7 +3,7 @@ import styles from './index.css';
 import PhotoGrid from '../../components/PhotoGrid';
 import TitleBox from '../../components/TitleBox';
 
-const ProjectContentPage = ({ project }) => (
+const DynamicProjectContentPage = ({ project }) => (
   <div
     className={styles.contentPage}
   >
@@ -17,9 +17,9 @@ const ProjectContentPage = ({ project }) => (
   </div>
 );
 
-ProjectContentPage.propTypes = {
+DynamicProjectContentPage.propTypes = {
   isActive: React.PropTypes.func,
   project: PropTypes.object.isRequired,
 };
 
-export default ProjectContentPage;
+export default DynamicProjectContentPage;
