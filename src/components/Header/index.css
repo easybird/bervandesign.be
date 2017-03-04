@@ -7,7 +7,7 @@
 
   color: var(--colorNeutralDark);
   background-color: var(--colorNeutralLight);
-  height: 2.5em;
+  height: 3em;
 }
 
 .navBarFakeTop {
@@ -15,5 +15,5 @@
   z-index: 0;
   width: 100%;
   display: block;
-  height: 2.5em;
+  height: 3em;
 }

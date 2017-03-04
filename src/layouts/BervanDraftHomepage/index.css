@@ -14,16 +14,16 @@
 
 .content {
   position: absolute;
-  top: 2.5em;
+  top: 3em;
   left: 0;
   right: 0;
-  height: calc(100vh - 5em)
+  height: calc(100vh - 6em)
 }
 
 .panels {
   position: relative;
-  height: calc(100vh - 5em);
-  min-height: calc(100vh - 5em);
+  height: calc(100vh - 6em);
+  min-height: calc(100vh - 6em);
   z-index: 90;
   background-color: var(--colorNeutralLight);
 }
@@ -31,7 +31,7 @@
 .page {
   position: fixed;
   background-color: yellow;
-  top: 2.5em;
+  top: 3em;
   left: 0;
   right: 0;
 }
@@ -98,12 +98,12 @@ p {
 
 @media (--tablet-landscape-and-up) {
   .content {
-    left: 2.5em;
-    right: 2.5em;
+    left: 3em;
+    right: 3em;
   }
 
   .page {
-    left: 2.5em;
-    right: 2.5em;
+    left: 3em;
+    right: 3em;
   }
 }

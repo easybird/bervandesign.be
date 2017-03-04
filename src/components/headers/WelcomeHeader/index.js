@@ -13,7 +13,8 @@ const WelcomeHeader = ({ head }) => (
                   random={true}
       />
     </div>
-    <div style={{margin: "0 auto",
+    <div style={{
+      margin: "0 auto",
       cursor: "pointer",
       flexGrow: 1,
       display: 'flex',

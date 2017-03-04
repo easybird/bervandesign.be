@@ -6,7 +6,6 @@ import { Element, Events } from 'react-scroll';
 import styles from './index.css';
 
 const documentFlow = ['header', 'content1', 'content2'];
-const navBarHeight = '3em';
 
 class BervanHomepage extends React.Component {
 
@@ -50,15 +49,12 @@ class BervanHomepage extends React.Component {
         className={ styles.bervanHomepage }
       >
         <Metadata { ...this.props } />
-        <NavBar
-          height={navBarHeight}
-        />
-          <Element name={documentFlow[0]}>
-            <WelcomeHeader
-              pageHeightLoss={navBarHeight}
-              { ...this.props }
-            />
-          </Element>
+        <NavBar />
+        <Element name={documentFlow[0]}>
+          <WelcomeHeader
+            { ...this.props }
+          />
+        </Element>
       </div>
     )
   }

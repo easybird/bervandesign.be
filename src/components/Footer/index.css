@@ -8,8 +8,8 @@
   right: 0;
   color: var(--colorNeutralDark);
   background-color: var(--colorNeutralLight);
-  height: 2.5em;
-  padding-left: 2.5em;
+  height: 3em;
+  padding-left: 3em;
 }
 
 .companyTag {

@@ -9,7 +9,6 @@
 }
 
 .mainNav {
-  background-color: var(--colorWhite);
   width: 100%;
   display: none;
   flex-direction: column;

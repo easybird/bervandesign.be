@@ -60,7 +60,7 @@ export default class HeroImages extends Component {
             marginRight: '-100%',
             position: 'relative',
             display: 'block',
-            height: 'calc(100vh - 5em)',
+            height: 'calc(100vh - 6em)',
             zIndex: `${ slide == index ? 2 : 1}`
           }}
           className={`${styles.slide} ${slide == index ? styles.visible : styles.invisible}`}

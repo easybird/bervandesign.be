@@ -14,11 +14,17 @@ class BervanDraftHomepage extends React.Component {
     super(props);
     this.state = {
       isScrolling: false,
-      activeDocument: 0
-    }
+      activeDocument: 0,
+      pageTop: true
+    };
   }
 
   componentDidMount() {
+    const handleScroll = this.handleScroll.bind(this);
+    window.addEventListener('keydown', handleScroll, true);
+    window.addEventListener('wheel', handleScroll, true);
+    window.addEventListener('touchstart', handleScroll, true);
+
     // https://github.com/brigade/react-waypoint ==> to lazy load stuff
     Events.scrollEvent.register('begin', () => {
       this.setState({
@@ -45,7 +51,7 @@ class BervanDraftHomepage extends React.Component {
         className={ styles.bervanHomepage }
       >
         <Metadata { ...this.props } />
-        <Header/>
+        <Header />
         <div className={styles.content}>
           <div className={`${styles.page} ${styles.panels}`}>
             <Element name={documentFlow[0]}>
@@ -63,11 +69,17 @@ class BervanDraftHomepage extends React.Component {
           </div>
         </div>
         <Footer
-          scrollTo={documentFlow[this.state.activeDocument === documentFlow.length-1 ? 0 : this.state.activeDocument + 1]}
-          hide={this.state.activeDocument === 1}
+          scrollTo={documentFlow[this.state.activeDocument === documentFlow.length - 1 ? 0 : this.state.activeDocument + 1]}
+          hide={this.state.activeDocument === 1 || !this.state.pageTop}
         />
       </div>
     )
+  }
+
+  handleScroll() {
+    if (this.state.pageTop) {
+      this.setState({ pageTop: false })
+    }
   }
 }
 
