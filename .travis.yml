@@ -6,15 +6,15 @@ branches:
   except:
   - master
 deploy:
-- provider: github-pages
+- provider: script
   skip_cleanup: true
   script: ./scripts/githubPages.sh
   on:
     branch: develop
     node: '6'
 - provider: s3
-  access_key_id: S3_ACCESS_KEY
-  secret_access_key: S3_SECRET_KEY
+  access_key_id: $S3_ACCESS_KEY
+  secret_access_key: $S3_SECRET_KEY
   bucket: "bervan-draft"
   skip_cleanup: true
   local_dir: dist
