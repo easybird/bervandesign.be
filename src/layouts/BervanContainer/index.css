@@ -28,7 +28,7 @@
   background-color: var(--colorNeutralLight);
 }
 
-.page {
+.fixedPage {
   position: fixed;
   background-color: yellow;
   top: 3em;
@@ -36,7 +36,7 @@
   right: 0;
 }
 
-.next {
+.nextPage {
   margin-top: 100vh;
 }
 
@@ -102,7 +102,7 @@ p {
     right: 3em;
   }
 
-  .page {
+  .fixedPage {
     left: 3em;
     right: 3em;
   }

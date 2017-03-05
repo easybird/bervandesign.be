@@ -9,8 +9,54 @@ hero:
     - /assets/img/hero/hero_sfeer.jpg
     - /assets/img/hero/hero_slaapkamer.jpg 
   title: Landelijke stijl
+details:
+  - src: /assets/img/thema/landelijk/kuurne/_top.jpg
+    position: PORTRAIT
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem
+  - src: /assets/img/thema/landelijk/kuurne/_top.jpg
+    position: PORTRAIT
+    title: Totaalproject woning Dentergem
+    projectRef: andere-woning
+  - src: /assets/img/hero/hero_landelijk.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem
+  - src: /assets/img/hero/hero_modern.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
+  - src: /assets/img/hero/hero_sfeer.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
+  - src: /assets/img/thema/landelijk/kuurne/_top.jpg
+    position: PORTRAIT
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem
+  - src: /assets/img/thema/landelijk/kuurne/_top.jpg
+    position: PORTRAIT
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
+  - src: /assets/img/hero/hero_landelijk.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
+  - src: /assets/img/hero/hero_landelijk.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
+  - src: /assets/img/hero/hero_landelijk.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
+  - src: /assets/img/hero/hero_landelijk.jpg
+    position: LANDSCAPE
+    title: Totaalproject woning Dentergem
+    projectRef: woning-dentergem    
 projects:
-  - title: Totaalproject woning Dentergem
+  - id: woning-dentergem
+    title: Totaalproject woning Dentergem
     images:
       - src: /assets/img/hero/hero_landelijk.jpg
         title: Landelijk
@@ -28,7 +74,8 @@ projects:
         title: Minimalistisch 
       - src: /assets/img/hero/hero_sfeer.jpg
         title: Minimalistisch
-  - title: Een ander project woning Dentergem
+  - id: andere-woning
+    title: Een ander project woning Dentergem
     images:
       - src: /assets/img/hero/hero_landelijk.jpg
         title: Landelijk

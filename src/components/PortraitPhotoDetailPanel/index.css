@@ -1,0 +1,68 @@
+@custom-media --tablet-portrait (480px < width <= 786px);
+@custom-media --tablet-landscape (786px < width <= 1024px);
+@custom-media --tablet-and-up (width > 480px);
+@custom-media --tablet-landscape-and-up (width > 786px);
+@custom-media --desktop-and-up (width > 1024px);
+
+.photos {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid white;
+  position: relative;
+}
+
+.emptySpan {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 1s;
+}
+
+.imageCountTwo {
+  flex-basis: 50%;
+}
+
+.photoPanelTwo {
+  flex-direction: column;
+}
+
+.imageCountMore {
+  flex-basis: 50%;
+}
+
+.photoPanelMore {
+  flex-direction: column;
+}
+
+.emptySpan:hover {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+@media (--tablet-and-up) {
+  .photoPanelTwo {
+    flex-direction: row;
+  }
+
+}
+
+@media (--tablet-landscape-and-up) {
+  .imageCountMore {
+    flex-basis: 33%;
+  }
+
+  .photoPanelMore {
+    flex-direction: row;
+  }
+}

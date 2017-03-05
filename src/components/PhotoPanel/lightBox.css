@@ -1,0 +1,57 @@
+.container {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.8);
+  fill: #222;
+  opacity: 0.6;
+  transition: opacity 200ms;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow-size-medium {
+  border-radius: 40px;
+  height: 40px;
+  margin-top: -20px;
+}
+
+@media (min-width: 768px) {
+  .arrow-size-medium {
+    height: 70px;
+    padding: 15px;
+  }
+}
+
+.arrow-direction-left {
+  margin-left: 10px;
+}
+
+.arrow-direction-right {
+  margin-right: 10px;
+}
+
+.close {
+  fill: '#D40000';
+  opacity: 0.6;
+  transition: all 200ms;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+footer {
+  color: black;
+}
+
+.footerCount {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.thumbnail-active {
+  box-shadow: 0 0 0 2px #00D8FF;
+}

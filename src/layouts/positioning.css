@@ -1,7 +1,47 @@
+@custom-media --tablet-portrait (480px < width <= 786px);
+@custom-media --tablet-landscape (786px < width <= 1024px);
+@custom-media --tablet-and-up (width > 480px);
+@custom-media --tablet-landscape-and-up (width > 786px);
+@custom-media --desktop-and-up (width > 1024px);
+
 .centerAbsolute {
   position: absolute;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
+}
+
+.panel {
+  height: calc(100vh - 6em);
+  min-height: calc(100vh - 6em);
+  z-index: 90;
+  background-color: var(--colorNeutralLight);
+}
+
+.relativePanel {
+  position: relative;
+}
+
+.fixedPanelOnTop {
+  position: fixed;
+  top: 3em;
+  left: 0;
+  right: 0;
+}
+
+.nextPage {
+  margin-top: 100vh;
+}
+
+.page {
+  height: 100%;
+  margin-bottom: 3em;
+}
+
+@media (--tablet-landscape-and-up) {
+  .fixedPanelOnTop {
+    left: 3em;
+    right: 3em;
+  }
 }

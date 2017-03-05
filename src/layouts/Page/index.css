@@ -1,4 +1,4 @@
-.page {
+.fixedPage {
   display: flex;
   flex-direction: column;
 }
