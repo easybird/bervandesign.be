@@ -80,3 +80,24 @@ body {
     opacity: 1;
   }
 }
+
+/**
+* react-spark-scroll-rekapi
+**/
+.pin-cont-proxy {
+  position: absolute;
+  height: 100%;
+}
+
+.slide-proxy {
+  height: 200px;
+}
+
+.parallax-proxy {
+  position: absolute;
+  height: 100%;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
