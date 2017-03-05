@@ -7,6 +7,7 @@ import PageError from './layouts/PageError';
 import Homepage from './layouts/Homepage';
 import BervanHomepage from './layouts/BervanHomepage';
 import BervanThema from './layouts/BervanThema';
+import Test from './layouts/Test';
 import Post from './layouts/Post';
 
 // GOOGLE Analytics, part 1/2
@@ -52,6 +53,7 @@ const PageContainer = (props) => (
       PageError,
       Homepage,
       BervanHomepage,
+      Test,
       BervanThema,
       Post,
     }}

@@ -1,13 +1,17 @@
 import React from 'react';
 import BervanContainer from '../BervanContainer';
 import positioning from '../positioning.css';
-import PhotoPanel from '../../components/PhotoPanel';
-import PortraitPhotoDetailPanel from '../../components/PortraitPhotoDetailPanel';
+import PortraitPhotoDetailPanel from '../../components/photoPanels/PortraitPhotoDetailPanel';
+import LandscapePhotoDetailPanel from '../../components/photoPanels/LandscapePhotoDetailPanel';
+import CombinationPhotoDetailPanel from '../../components/photoPanels/CombinationPhotoDetailPanel';
 
 class BervanThema extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      activeChild: 0
+    }
   }
 
   openLightBox = (projectRef) => {
@@ -18,8 +22,14 @@ class BervanThema extends React.Component {
     const projectContent = [];
 
     const addProjectContent = (child) => {
-      const classNames = projectContent.length === 0 ? `${positioning.fixedPanelOnTop} ${positioning.panel}`
-        : `${positioning.panel} ${positioning.relativePanel} ${positioning.nextPage}`;
+      let classNames;
+      if (this.state.activeChild === projectContent.length) {
+        classNames = `${positioning.fixedPanelOnTop} ${positioning.panel}`;
+      } else if (this.state.activeChild + 1 === projectContent.length) {
+        classNames = `${positioning.panel} ${positioning.relativePanel} ${positioning.nextPage}`;
+      } else {
+        classNames = `${positioning.panel} ${positioning.relativePanel}`
+      }
 
       projectContent.push(
         <div className={classNames}
@@ -45,19 +55,24 @@ class BervanThema extends React.Component {
       />
     );
 
-    this.props.head.projects.map((project) => {
-      addProjectContent(
-        <PhotoPanel
-          images={project.images}
-        />
-      );
-    });
+    addProjectContent(
+      <LandscapePhotoDetailPanel
+        details={[this.props.head.details[2], this.props.head.details[3], this.props.head.details[4], this.props.head.details[7]]}
+        openLightBox={this.openLightBox}
+      />
+    );
+
+    addProjectContent(
+      <CombinationPhotoDetailPanel
+        details={[this.props.head.details[0], this.props.head.details[1], this.props.head.details[4], this.props.head.details[7]]}
+        openLightBox={this.openLightBox}
+      />
+    );
 
     return (
       <BervanContainer {...this.props }>
         {projectContent}
       </BervanContainer>
-
     )
   }
 }

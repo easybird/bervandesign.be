@@ -4,6 +4,7 @@ import styles from './index.css';
 const PortraitPhotoDetailPanel = ({ details, openLightBox }) => {
   const imageCountStyle = details.length < 3 ? styles.imageCountTwo : styles.imageCountMore;
   const photoPanelStyle = details.length < 3 ? styles.photoPanelTwo : styles.photoPanelMore;
+
   const images = details.map((detail, index) => {
     return <div
       className={`${styles.image} ${imageCountStyle}`}
