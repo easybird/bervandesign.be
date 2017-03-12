@@ -15,7 +15,6 @@
 .panel {
   height: calc(100vh - 6em);
   min-height: calc(100vh - 6em);
-  z-index: 90;
   background-color: var(--colorNeutralLight);
 }
 
@@ -25,6 +24,8 @@
 
 .fixedPanelOnTop {
   position: fixed;
+  height: calc(100vh - 6em);
+  min-height: calc(100vh - 6em);
   top: 3em;
   left: 0;
   right: 0;

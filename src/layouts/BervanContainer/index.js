@@ -51,7 +51,7 @@ class BervanContainer extends React.Component {
         <Metadata { ...this.props } />
         <Header />
         <div className={styles.content}>
-          { this.props.children.map((child, index) => <Element key={index} name={`${documentName}${index+1}`}>{ child }</Element>) }
+          { React.Children.toArray(this.props.children).map((child, index) => <Element key={index} name={`${documentName}${index+1}`}>{ child }</Element>) }
         </div>
         <Footer
           scrollTo={`${documentName}${[this.state.activeDocument === this.props.children.length ? 1 : this.state.activeDocument + 1]}`}
@@ -70,7 +70,7 @@ class BervanContainer extends React.Component {
 
 BervanContainer.propTypes = {
   head: React.PropTypes.object.isRequired,
-  children: React.PropTypes.array.isRequired
+  children: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.object]).isRequired
 };
 
 export default BervanContainer;
