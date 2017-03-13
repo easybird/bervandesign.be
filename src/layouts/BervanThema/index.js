@@ -68,19 +68,12 @@ class BervanThema extends React.Component {
             <SparkScroll.section
               className={cx(positioning.fixedPanelOnTop)}
               proxy="pin-cont"
-              timeline={{
-                topTop: {
-                  log: 'topTop section'
-                }
-              }}
             >
               <SparkScroll.div className={cx(sparkLayout.pinPhotoPanel, positioning.panel)}
                                proxy="pin-cont"
                                timeline={{
                                  topTop: {
                                    top: '0%',
-                                   marginTop: '0px',
-                                   log: 'topTop pinText'
                                  }
                                }}
               >
@@ -90,11 +83,11 @@ class BervanThema extends React.Component {
                                proxy="pin-cont"
                                timeline={{
                                  'topTop+0': {
-                                   width: '0%',
+                                   top: '100%',
                                  },
                                  'topTop+850': {
-                                   width: [
-                                     '100%', 'easeOutQuart'
+                                   top: [
+                                     '0%', 'easeOutQuart'
                                    ],
                                  }
                                }}>
@@ -105,10 +98,10 @@ class BervanThema extends React.Component {
                                proxy="pin-cont"
                                timeline={{
                                  'topTop+870': {
-                                   bottom: '100%',
+                                   top: '100%',
                                  },
                                  'topTop+1220': {
-                                   bottom: [
+                                   top: [
                                      '0%', 'easeOutQuart'
                                    ]
                                  }
@@ -119,10 +112,10 @@ class BervanThema extends React.Component {
                                proxy="pin-cont"
                                timeline={{
                                  'topTop+1250': {
-                                   left: '110%'
+                                   top: '100%'
                                  },
                                  'topTop+2100': {
-                                   left: [
+                                   top: [
                                      '0%', 'easeOutQuart'
                                    ],
                                  }
