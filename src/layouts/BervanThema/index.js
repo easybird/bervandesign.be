@@ -6,6 +6,7 @@ import positioning from '../positioning.css';
 import PortraitPhotoDetailPanel from '../../components/photoPanels/PortraitPhotoDetailPanel';
 import LandscapePhotoDetailPanel from '../../components/photoPanels/LandscapePhotoDetailPanel';
 import CombinationPhotoDetailPanel from '../../components/photoPanels/CombinationPhotoDetailPanel';
+import EasybirdCarousel from '../../components/photoPanels/EasybirdCarousel';
 
 const spark = (typeof window !== "undefined")
   ? require("../Spark/init-spark")
@@ -16,13 +17,25 @@ class BervanThema extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeChild: 0
-    }
+      openCarousel: false
+    };
+    this.openLightBox = (projectRef) => this._openLightBox(projectRef);
   }
 
-  openLightBox = (projectRef) => {
-    alert(`test ${projectRef}`);
-  };
+  _openLightBox(projectRef) {
+    this.setState({
+      images: [
+        { src: '/assets/img/hero/hero_landelijk.jpg', caption: "Foto Mark Wallican - Project Verbrugge Antwerpen" },
+        { src: '/assets/img/hero/hero_modern.jpg', caption: projectRef },
+        {
+          src: '/assets/img/thema/landelijk/kuurne/_top.jpg',
+          position: 'PORTRAIT',
+          caption: "Totaalproject woning Dentergem"
+        }
+      ],
+      openCarousel: true,
+    });
+  }
 
   renderWithoutJs({ photoDetailPanel1, photoDetailPanel2, photoDetailPanel3, photoDetailPanel4 }) {
     const projectContent = [];
@@ -45,11 +58,8 @@ class BervanThema extends React.Component {
     addProjectContent(photoDetailPanel3);
     addProjectContent(photoDetailPanel4);
 
-    return (
-      <BervanContainer {...this.props }>
-        {projectContent}
-      </BervanContainer>
-    )
+    return <div>{ projectContent }</div>
+
   }
 
   renderWithoutSpark({ photoDetailPanel1, photoDetailPanel2, photoDetailPanel3, photoDetailPanel4 }) {
@@ -59,77 +69,76 @@ class BervanThema extends React.Component {
     pinnedStateClassNames[sparkLayout.pinPin] = true;
 
     return (
-      <BervanContainer {...this.props }>
-
-        <div style={{
-          minHeight: '3200px'
-        }}>
-          <SparkProxy.div className={sparkLayout.pinnedContent} proxyId="pin-cont">
-            <SparkScroll.section
-              className={cx(positioning.fixedPanelOnTop)}
-              proxy="pin-cont"
+      <div style={{
+        minHeight: '3200px'
+      }}>
+        <SparkProxy.div className={sparkLayout.pinnedContent} proxyId="pin-cont">
+          <SparkScroll.section
+            className={cx(positioning.fixedPanelOnTop)}
+            proxy="pin-cont"
+          >
+            <SparkScroll.div className={cx(sparkLayout.pinPhotoPanel, positioning.panel)}
+                             proxy="pin-cont"
+                             timeline={{
+                               topTop: {
+                                 top: '0%',
+                               }
+                             }}
             >
-              <SparkScroll.div className={cx(sparkLayout.pinPhotoPanel, positioning.panel)}
-                               proxy="pin-cont"
-                               timeline={{
-                                 topTop: {
-                                   top: '0%',
-                                 }
-                               }}
-              >
-                {photoDetailPanel1}
-              </SparkScroll.div>
-              <SparkScroll.div className={cx(sparkLayout.revealPhotoPanel, positioning.panel)}
-                               proxy="pin-cont"
-                               timeline={{
-                                 'topTop+0': {
-                                   top: '100%',
-                                 },
-                                 'topTop+850': {
-                                   top: [
-                                     '0%', 'easeOutQuart'
-                                   ],
-                                 }
-                               }}>
-                {photoDetailPanel2}
-              </SparkScroll.div>
+              {photoDetailPanel1}
+            </SparkScroll.div>
+            <SparkScroll.div className={cx(sparkLayout.revealPhotoPanel, positioning.panel)}
+                             proxy="pin-cont"
+                             timeline={{
+                               'topTop+0': {
+                                 top: '100%',
+                               },
+                               'topTop+850': {
+                                 top: [
+                                   '0%', 'easeOutQuart'
+                                 ],
+                               }
+                             }}>
+              {photoDetailPanel2}
+            </SparkScroll.div>
 
-              <SparkScroll.div className={cx(sparkLayout.revealPhotoPanel, positioning.panel)}
-                               proxy="pin-cont"
-                               timeline={{
-                                 'topTop+870': {
-                                   top: '100%',
-                                 },
-                                 'topTop+1220': {
-                                   top: [
-                                     '0%', 'easeOutQuart'
-                                   ]
-                                 }
-                               }}>
-                {photoDetailPanel3}
-              </SparkScroll.div>
-              <SparkScroll.div className={cx(sparkLayout.revealPhotoPanel, positioning.panel)}
-                               proxy="pin-cont"
-                               timeline={{
-                                 'topTop+1250': {
-                                   top: '100%'
-                                 },
-                                 'topTop+2100': {
-                                   top: [
-                                     '0%', 'easeOutQuart'
-                                   ],
-                                 }
-                               }}>
-                {photoDetailPanel4}
-              </SparkScroll.div>
+            <SparkScroll.div className={cx(sparkLayout.revealPhotoPanel, positioning.panel)}
+                             proxy="pin-cont"
+                             timeline={{
+                               'topTop+870': {
+                                 top: '100%',
+                               },
+                               'topTop+1220': {
+                                 top: [
+                                   '0%', 'easeOutQuart'
+                                 ]
+                               }
+                             }}>
+              {photoDetailPanel3}
+            </SparkScroll.div>
+            <SparkScroll.div className={cx(sparkLayout.revealPhotoPanel, positioning.panel)}
+                             proxy="pin-cont"
+                             timeline={{
+                               'topTop+1250': {
+                                 top: '100%'
+                               },
+                               'topTop+2100': {
+                                 top: [
+                                   '0%', 'easeOutQuart'
+                                 ],
+                               }
+                             }}>
+              {photoDetailPanel4}
+            </SparkScroll.div>
 
-            </SparkScroll.section>
-          </SparkProxy.div>
-        </div>
-      </BervanContainer>)
+          </SparkScroll.section>
+        </SparkProxy.div>
+      </div>)
   }
 
   render() {
+    let photoDetailPanels;
+
     const photoDetailPanel1 = <PortraitPhotoDetailPanel
       details={[this.props.head.details[0], this.props.head.details[1]]}
       openLightBox={this.openLightBox}
@@ -151,15 +160,26 @@ class BervanThema extends React.Component {
     />;
 
     if (!spark) {
-    return this.renderWithoutJs({ photoDetailPanel1, photoDetailPanel2, photoDetailPanel3, photoDetailPanel4 });
+      photoDetailPanels = this.renderWithoutJs(
+        { photoDetailPanel1, photoDetailPanel2, photoDetailPanel3, photoDetailPanel4 }
+      );
     } else {
-      return this.renderWithoutSpark({
+      photoDetailPanels = this.renderWithoutSpark({
         photoDetailPanel1,
         photoDetailPanel2,
         photoDetailPanel3,
         photoDetailPanel4
       });
     }
+
+    return (
+      <BervanContainer {...this.props }>
+        {photoDetailPanels}
+        <EasybirdCarousel
+          openCarousel={this.state.openCarousel}
+          images={this.state.images}
+        />
+      </BervanContainer>)
   }
 }
 
