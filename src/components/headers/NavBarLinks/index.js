@@ -1,20 +1,18 @@
 import React from "react";
-import { Link } from 'react-router';
-import styles from './index.css';
+// import { Link } from "react-router";
+import styles from "./index.css";
 
 const NavBarLinks = ({ isVisible }) => (
-  <ul
-    className={`${styles.mainNav} ${isVisible ? styles.visible : ''}`}
-  >
-    <li>
+  <ul className={`${styles.mainNav} ${isVisible ? styles.visible : ""}`}>
+    {/* <li>
       <Link
         className={ styles.link }
         to="/"
       >
         { "Over Bervan design" }
       </Link>
-    </li>
-    <li>
+    </li> */}
+    {/* <li>
       <Link
         className={ styles.link }
         to="/locatie"
@@ -29,9 +27,8 @@ const NavBarLinks = ({ isVisible }) => (
       >
         { "Contact" }
       </Link>
-    </li>
+    </li> */}
   </ul>
-
 );
 
 NavBarLinks.propTypes = {

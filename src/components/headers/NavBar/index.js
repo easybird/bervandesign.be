@@ -1,15 +1,14 @@
-import React from 'react';
-import styles from './index.css';
-import NavBarLinks from '../NavBarLinks';
+import React from "react";
+import styles from "./index.css";
+import NavBarLinks from "../NavBarLinks";
 
 class NavBar extends React.Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
       isVisible: false
-    }
+    };
   }
 
   render() {
@@ -19,15 +18,13 @@ class NavBar extends React.Component {
     const logo = <span className={styles.logo}>Bervan design</span>;
     const title = <span>Creatief maatwerk</span>;
 
-    const mobileBar =
-      <div
-        className={styles.mobileWrapper}
-      >
-            <span className={styles.topText}>
-              {logo}
-              {title}
-            </span>
-        <div className={`${styles.right}`}>
+    const mobileBar = (
+      <div className={styles.mobileWrapper}>
+        <span className={styles.topText}>
+          {logo}
+          {title}
+        </span>
+        {/* <div className={`${styles.right}`}>
           <a
             href={undefined}
             onClick={() => this.setState({ isVisible: !isVisible })}
@@ -45,43 +42,38 @@ class NavBar extends React.Component {
               }
             </i>
           </a>
-        </div>
-      </div>;
+        </div> */}
+      </div>
+    );
 
-    const mobileBarLinks =
+    const mobileBarLinks = (
       <div className={styles.mobileBarLinksWrapper}>
-        <NavBarLinks
-          isVisible={isVisible}
-        />
-      </div>;
-
+        <NavBarLinks isVisible={isVisible} />
+      </div>
+    );
 
     return (
       <nav>
         <div
           className={styles.navBarFakeTop}
-          style={{ height: `calc(${height})`}}
+          style={{ height: `calc(${height})` }}
         />
-        <div className={styles.navBarWrapper}
-             style={{ height: `calc(${height})`}}
+        <div
+          className={styles.navBarWrapper}
+          style={{ height: `calc(${height})` }}
         >
           {mobileBar}
           {mobileBarLinks}
-          <div
-            className={styles.siteWrapper}
-          >
+          <div className={styles.siteWrapper}>
             <span className={styles.topText}>
               {logo}
               {title}
-              </span>
+            </span>
             <div className={`${styles.right}`}>
-              <NavBarLinks
-                isVisible={isVisible}
-              />
+              <NavBarLinks isVisible={isVisible} />
             </div>
           </div>
         </div>
-
       </nav>
     );
   }
@@ -89,6 +81,6 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   height: React.PropTypes.string.isRequired
-}
+};
 
 export default NavBar;

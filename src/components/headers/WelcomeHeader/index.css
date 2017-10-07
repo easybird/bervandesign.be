@@ -12,6 +12,12 @@
   left: 20%;
 }
 
+.title {
+  padding-right: 15px;
+  font-size: 130%;
+  word-spacing: 5px;
+}
+
 .btn:link,
 .btn:visited {
   display: inline-block;
